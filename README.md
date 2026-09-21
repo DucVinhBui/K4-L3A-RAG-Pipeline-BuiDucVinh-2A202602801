@@ -1,20 +1,58 @@
-# Day 8 — RAG Pipeline
+# Day 8 — RAG Pipeline: Dịch vụ sinh viên Đại học Bách khoa Hà Nội
 
-## Mục tiêu
+Chatbot RAG trả lời câu hỏi về học phí, học bổng, quy chế đào tạo và dịch vụ
+sinh viên của Đại học Bách khoa Hà Nội, dựa trên bộ tài liệu tự thu thập từ
+nguồn công khai. Hybrid retrieval (dense + BM25 + RRF), fallback vectorless,
+generation có citation đối chiếu được, giao diện chat Streamlit và báo cáo
+đánh giá A/B.
 
-Mỗi nhóm xây dựng một chatbot RAG trả lời câu hỏi từ bộ tài liệu do nhóm thu thập. Sản phẩm phải có hybrid retrieval, citation, giao diện chat và báo cáo đánh giá.
+## Đề tài và dữ liệu
 
-Nhóm tự chọn bài toán và thu thập dữ liệu phù hợp; repo không cung cấp dữ liệu mẫu.
+| Loại | Số lượng | Nguồn |
+| --- | ---: | --- |
+| Tài liệu chính sách (PDF) | 4 | `ctt.hust.edu.vn`, `hust.edu.vn` — quy chế đào tạo 2023 & 2025, quyết định học phí 2025-2026, credit-based training regulation (EN) |
+| Bài viết/thông báo | 9 | `hust.edu.vn`, `ctt.hust.edu.vn` — học phí, học bổng KKHT và Trần Đại Nghĩa, kế hoạch học tập, gửi xe, lễ tốt nghiệp, hỗ trợ sinh viên |
 
-## Sản phẩm phải nộp
+Sau chuẩn hóa: 13 Markdown (~246k ký tự) → **633 chunks** trong ChromaDB.
+Mọi file `data/standardized/**.md` mang front matter `title/source/doc_type/url`
+nên metadata nguồn đi xuyên suốt tới citation trong câu trả lời.
 
-- Repository nhóm chạy được.
-- Tối thiểu 3 tài liệu chính sách và 5 bài viết/page do nhóm tự thu thập.
-- Pipeline: convert → chunk → index → dense + BM25 → RRF → fallback → generation có citation.
-- Chatbot Streamlit hiển thị câu trả lời và nguồn đã dùng.
-- Golden dataset tối thiểu 15 câu; đánh giá 4 metric và so sánh A/B.
-- `group_project/evaluation/RESULT.md`.
-- Mỗi thành viên nộp báo cáo cá nhân theo template trong `group_project/ịndividual/INDIVIDUAL_REPORT.md`.
+## Kiến trúc pipeline
+
+```
+task1 tải PDF ─┐
+               ├─ task3 chuẩn hóa Markdown + front matter
+task2 crawl ───┘            │
+                            ▼
+                 task4 chunk (500/50) → embed (bge-m3) → ChromaDB (cosine)
+                            │
+              ┌─────────────┴─────────────┐
+       task5 dense (cosine)        task6 BM25Plus
+              └─────────────┬─────────────┘
+                     task7 RRF (k=60, fuse một lần)
+                            │
+                task9 fallback theo cosine score gốc
+                       │ (< 0.59)        │ (≥ 0.59)
+                task8 PageIndex      hybrid results
+                            │
+                task10 reorder → context → LLM → answer + citation
+                            │
+                         app.py (Streamlit)
+```
+
+Quyết định thiết kế đáng chú ý:
+
+- **BM25Plus thay vì BM25Okapi.** idf của Okapi bằng 0 khi term xuất hiện ở
+  khoảng một nửa corpus và âm khi phổ biến hơn. Corpus ở đây nhỏ và đồng chủ
+  đề nên Okapi triệt tiêu đúng các term đặc trưng ("sinh viên", "học phí").
+- **Nhãn citation gán trước khi reorder.** Nếu đánh số sau reorder,
+  `[Document 2]` trong câu trả lời sẽ trỏ sai phần tử của `sources` — trong
+  khi `sources` bắt buộc sort theo score giảm dần.
+- **Fallback so với cosine score gốc, không phải RRF score.** RRF score chỉ
+  phản ánh thứ hạng: query ngoài domain vẫn cho top-1 đúng `1/61` như query
+  đúng domain, nên không phân biệt được gì.
+- **Selector nội dung khi crawl.** Crawl cả trang thì ~95% là menu điều hướng
+  lặp trên mọi URL; mỗi nguồn khai báo `selector` trỏ vào khối bài viết.
 
 ## Quick start
 
@@ -28,9 +66,12 @@ cp .env.example .env
 ```
 
 Điền API key cần dùng trong `.env`; không commit file này.
+Cấu hình đang dùng: `LLM_PROVIDER=openai`, `LLM_MODEL=gpt-4o-mini`,
+`EMBEDDING_PROVIDER=sentence_transformers`, `EMBEDDING_MODEL=BAAI/bge-m3`
+(tải ~2.2GB lần đầu), `SCORE_THRESHOLD=0.59`.
 
 ```bash
-# 1. Thu thập và chuẩn hoá
+# 1. Thu thập và chuẩn hoá (chạy lại an toàn, không tạo bản trùng)
 python -m src.task1_collect_legal_docs
 python -m src.task2_crawl_news
 python -m src.task3_convert_markdown
@@ -43,32 +84,35 @@ pytest -q
 streamlit run app.py
 ```
 
-## Lộ trình 3 giờ
+## Hiệu chỉnh ngưỡng fallback
 
-| Mốc                  | Thời gian | Kết quả cần có                           |
-| -------------------- | --------: | ---------------------------------------- |
-| 0. Setup             |   10 phút | Môi trường và `.env` sẵn sàng            |
-| 1. Data              |   25 phút | ≥3 legal, ≥5 news, Markdown đã chuẩn hoá |
-| 2. Index & search    |   30 phút | ChromaDB, dense search và BM25 chạy được |
-| 3. Fusion & fallback |   25 phút | RRF và fallback tuân thủ contract        |
-| 4. Generation & UI   |   30 phút | Chatbot trả lời có citation              |
-| 5. Evaluation        |   30 phút | 15+ Q&A, 4 metric, A/B comparison        |
-| 6. Demo & handoff    |   30 phút | Test, report, demo và push repository    |
+`SCORE_THRESHOLD` không có con số đúng cho mọi corpus — phải đo trên chính
+corpus của nhóm:
 
-## Lưu ý quy tắc để có code quality tốt:
+```bash
+python -m scripts.calibrate_threshold
+```
 
-- Dense và BM25 nên cùng trả về `SearchResult` theo một schema.
-- RRF chỉ nên dùng để gộp thứ hạng và chỉ chạy một lần.
-- Fallback dùng cosine score gốc của dense retrieval.
-- Threshold phải được hiệu chỉnh trên query in domain và out of domain, không có một con số đúng cho mọi corpus.
+Kết quả đo trên 10 query in-domain và 8 query out-of-domain:
 
-## Tài liệu
+| Nhóm query | min | mean | max |
+| --- | ---: | ---: | ---: |
+| In-domain | 0.6820 | 0.7199 | 0.7604 |
+| Out-of-domain | 0.3769 | 0.4236 | 0.4882 |
 
-- [Module contracts](docs/MODULE_CONTRACTS.md): schema, interface và invariant mà code/test nên tuân theo.
-- [Step-by-step guide](docs/STEP_BY_STEP.md): thứ tự triển khai và tiêu chí hoàn thành từng bước.
-- [Grading rubric](docs/GRADING_RUBRIC.md): Rubric thang điểm.
-- [Individual report](group_project/ịndividual/INDIVIDUAL_REPORT.md): template báo cáo cá nhân.
-- [Suggested topics](docs/SUGGESTED_TOPICS.md): danh sách chủ đề tham khảo, không bắt buộc.
+Hai phân phối tách sạch trong khoảng `(0.4882, 0.6820)` → chọn **0.59**.
+
+## Đánh giá
+
+```bash
+python -m scripts.verify_golden_dataset          # mọi ground truth phải có thật trong corpus
+python -m scripts.evaluate --retrieval-only      # hit-rate + latency, không tốn API
+python -m scripts.evaluate                       # thêm 4 metric RAGAS (cần OPENAI_API_KEY)
+```
+
+Golden dataset: 18 câu hỏi trong `group_project/evaluation/golden_dataset.json`,
+mọi `expected_context` được script kiểm chứng là trích đúng từ corpus đã index.
+Kết quả và phân tích lỗi: [`group_project/evaluation/RESULT.md`](group_project/evaluation/RESULT.md).
 
 ## Kiểm tra
 
@@ -82,3 +126,24 @@ pytest tests/test_acceptance.py -q
 # Toàn bộ
 pytest -q
 ```
+
+## Cấu trúc
+
+```
+src/task1..task10        pipeline theo docs/MODULE_CONTRACTS.md
+src/contracts.py         schema + validator dùng chung
+scripts/calibrate_threshold.py   hiệu chỉnh ngưỡng fallback
+scripts/verify_golden_dataset.py kiểm chứng ground truth
+scripts/evaluate.py      A/B dense-only vs hybrid + RRF
+app.py                   chatbot Streamlit
+data/landing/            file gốc (PDF, JSON crawl)
+data/standardized/       Markdown + front matter
+```
+
+## Tài liệu
+
+- [Module contracts](docs/MODULE_CONTRACTS.md): schema, interface và invariant mà code/test nên tuân theo.
+- [Step-by-step guide](docs/STEP_BY_STEP.md): thứ tự triển khai và tiêu chí hoàn thành từng bước.
+- [Grading rubric](docs/GRADING_RUBRIC.md): Rubric thang điểm.
+- [Individual report](group_project/ịndividual/INDIVIDUAL_REPORT.md): template báo cáo cá nhân.
+- [Suggested topics](docs/SUGGESTED_TOPICS.md): danh sách chủ đề tham khảo, không bắt buộc.
