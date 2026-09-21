@@ -5,7 +5,7 @@ import time
 import streamlit as st
 from dotenv import load_dotenv
 
-from src.task9_retrieval_pipeline import SCORE_THRESHOLD, retrieve
+from src.task9_retrieval_pipeline import SCORE_THRESHOLD, run_retrieval
 from src.task10_generation import (
     LLM_MODEL,
     LLM_PROVIDER,
@@ -14,6 +14,8 @@ from src.task10_generation import (
     build_prompt,
     call_llm,
 )
+from src.bonus_query_expansion import expand_query
+from src.bonus_conversation_memory import rewrite_followup
 
 
 load_dotenv()
@@ -86,7 +88,27 @@ with st.sidebar:
     )
     top_k = st.slider("Số chunks (top_k)", 3, 10, 5)
     use_reranking = st.toggle("Hybrid + RRF", value=True, help="Tắt = dense-only")
+    use_cross_encoder = st.toggle(
+        "Cross-encoder rerank",
+        value=False,
+        help="Chấm lại ứng viên bằng bge-reranker-v2-m3 thay vì fuse theo thứ hạng. "
+        "Chính xác hơn RRF nhưng chậm hơn ~19 lần và nạp model ~2.2GB ở lần đầu.",
+    )
+    use_hyde = st.toggle(
+        "HyDE query expansion",
+        value=False,
+        help="Cho LLM viết một đoạn văn giả định trả lời câu hỏi rồi tìm bằng cả "
+        "hai. Tốn thêm 1 LLM call mỗi câu.",
+    )
     use_memory = st.toggle("Nhớ hội thoại", value=True)
+    use_rewrite = st.toggle(
+        "Viết lại câu hỏi theo lịch sử",
+        value=False,
+        disabled=not use_memory,
+        help="Giải đại từ hồi chỉ trước khi retrieve. Đo được 0.714 so với "
+        "0.857 của memory-trong-prompt trên bộ follow-up: bản viết lại đôi khi "
+        "đánh rơi cụm phân biệt và retrieval mất luôn chunk đúng. Mặc định tắt.",
+    )
     threshold = st.slider(
         "Ngưỡng fallback (cosine)", 0.0, 1.0, float(SCORE_THRESHOLD), 0.05
     )
@@ -129,24 +151,34 @@ if query:
             history = (
                 format_history(st.session_state.messages[:-1]) if use_memory else ""
             )
-            sources = retrieve(
-                query,
+            # Câu viết lại dùng cho CẢ retrieval lẫn prompt — đúng như nhánh
+            # đã đo trong scripts/evaluate_memory.py. Nếu chỉ thay ở retrieval
+            # thì con số trong RESULT.md không còn mô tả hành vi của app này.
+            search_query = (
+                rewrite_followup(query, history)
+                if (use_rewrite and use_memory and history)
+                else query
+            )
+            variants = expand_query(search_query) if use_hyde else None
+            sources = run_retrieval(
+                search_query,
                 top_k=top_k,
                 score_threshold=threshold,
                 use_reranking=use_reranking,
+                reranker="cross_encoder" if use_cross_encoder else "rrf",
+                query_variants=variants,
             )
             if not sources:
                 answer = REFUSAL_MESSAGE
                 retrieval_source = "none"
             else:
-                retrieval_source = (
-                    "pageindex"
-                    if sources[0]["retrieval_method"] == "pageindex"
-                    else "hybrid"
+                retrieval_source = sources[0].get(
+                    "rerank_method", sources[0]["retrieval_method"]
                 )
                 try:
                     answer = call_llm(
-                        SYSTEM_PROMPT, build_prompt(query, sources, history)
+                        SYSTEM_PROMPT,
+                        build_prompt(search_query, sources, history),
                     )
                 except Exception as error:
                     answer = f"{REFUSAL_MESSAGE}\n\n_(Lỗi provider: {error})_"
