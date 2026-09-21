@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fu-01",
+    "category": "học bổng",
+    "turn_1": "Học bổng khuyến khích học tập có mấy mức?",
+    "turn_2": "Mức cao nhất bằng bao nhiêu lần mức thấp nhất?",
+    "expected_any": ["1,5", "1.5"],
+    "why_needs_history": "'mức cao nhất' và 'mức thấp nhất' không có tiền ngữ; thiếu lượt 1 thì không biết đang nói về 3 mức học bổng A/B/C."
+  },
+  {
+    "id": "fu-02",
+    "category": "cảnh báo học tập",
+    "turn_1": "Sinh viên bị nâng một mức cảnh báo học tập khi nào?",
+    "turn_2": "Thế còn nâng hai mức thì sao?",
+    "expected_any": ["16"],
+    "why_needs_history": "'thế còn' là ellipsis; chủ ngữ và động từ đều nằm ở lượt trước."
+  },
+  {
+    "id": "fu-03",
+    "category": "dịch vụ",
+    "turn_1": "Sinh viên đi vào cổng Parabol thì gửi xe ở đâu?",
+    "turn_2": "Còn cổng Trần Đại Nghĩa?",
+    "expected_any": ["C7"],
+    "why_needs_history": "Lượt 2 chỉ có một danh từ; phần hỏi 'gửi xe ở đâu' nằm ở lượt 1."
+  },
+  {
+    "id": "fu-04",
+    "category": "học bổng",
+    "turn_1": "Học bổng Trần Đại Nghĩa dành cho đối tượng nào?",
+    "turn_2": "Học bổng này có mấy mức?",
+    "expected_any": ["2 mức", "hai mức", "50% và 100%"],
+    "why_needs_history": "'học bổng này' hồi chỉ Trần Đại Nghĩa; thiếu tiền ngữ thì retrieval kéo sang học bổng KKHT và trả lời '3 mức'."
+  },
+  {
+    "id": "fu-05",
+    "category": "cảnh báo học tập",
+    "turn_1": "Cảnh báo học tập mức 3 được áp dụng với sinh viên nào?",
+    "turn_2": "Còn khi nào thì được hạ một mức?",
+    "expected_any": ["bằng 4", "hơn 4", "≤ 4", "<= 4"],
+    "why_needs_history": "'hạ một mức' của cái gì — chỉ lượt 1 mới nói đang bàn về mức cảnh báo học tập."
+  },
+  {
+    "id": "fu-06",
+    "category": "dịch vụ",
+    "turn_1": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức ở đâu?",
+    "turn_2": "Vào những ngày nào?",
+    "expected_any": ["26/9", "26.9", "26/09"],
+    "why_needs_history": "Lượt 2 không có chủ thể nào; toàn bộ 'lễ tốt nghiệp đợt tháng 9/2026' nằm ở lượt 1."
+  },
+  {
+    "id": "fu-07",
+    "category": "tốt nghiệp",
+    "turn_1": "Điều kiện để sinh viên được xét công nhận tốt nghiệp là gì?",
+    "turn_2": "Điểm trung bình tích lũy phải đạt bao nhiêu?",
+    "expected_any": ["2,0", "2.0"],
+    "why_needs_history": "Thiếu lượt 1 thì không rõ đang hỏi ngưỡng GPA cho việc gì — xét tốt nghiệp, xét học bổng hay cảnh báo học tập."
+  }
+]

@@ -1,0 +1,346 @@
+{
+  "run": {
+    "generator_model": "openai/gpt-4o-mini",
+    "top_k": 5,
+    "dataset_size": 7,
+    "history_turns": 1
+  },
+  "summary": {
+    "none": {
+      "label": "Không memory",
+      "accuracy": 0.7142857142857143,
+      "context_hit_rate": 1.0,
+      "refusal_rate": 0.14285714285714285,
+      "mean_rewrite_s": 0.0,
+      "mean_generation_s": 1.3935714285714287
+    },
+    "prompt": {
+      "label": "Memory trong prompt",
+      "accuracy": 0.8571428571428571,
+      "context_hit_rate": 1.0,
+      "refusal_rate": 0.14285714285714285,
+      "mean_rewrite_s": 0.0,
+      "mean_generation_s": 1.44
+    },
+    "rewrite": {
+      "label": "Memory + rewrite query",
+      "accuracy": 0.7142857142857143,
+      "context_hit_rate": 0.8571428571428571,
+      "refusal_rate": 0.14285714285714285,
+      "mean_rewrite_s": 0.9395714285714287,
+      "mean_generation_s": 1.4341428571428574
+    }
+  },
+  "rows": [
+    {
+      "id": "fu-01",
+      "category": "học bổng",
+      "turn_1": "Học bổng khuyến khích học tập có mấy mức?",
+      "turn_1_answer": "Học bổng khuyến khích học tập có 3 mức: loại A (xuất sắc), loại B (giỏi) và loại C (khá) [Document 1].",
+      "turn_2": "Mức cao nhất bằng bao nhiêu lần mức thấp nhất?",
+      "expected_any": [
+        "1,5",
+        "1.5"
+      ],
+      "why_needs_history": "'mức cao nhất' và 'mức thấp nhất' không có tiền ngữ; thiếu lượt 1 thì không biết đang nói về 3 mức học bổng A/B/C.",
+      "variants": {
+        "none": {
+          "label": "Không memory",
+          "query_used": "Mức cao nhất bằng bao nhiêu lần mức thấp nhất?",
+          "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có. Bộ tài liệu đang dùng chỉ gồm quy chế đào tạo, quyết định học phí và thông báo dịch vụ sinh viên của ĐH Bách khoa Hà Nội.",
+          "correct": false,
+          "context_hit": true,
+          "refused": true,
+          "rewrite_s": 0.0,
+          "generation_s": 1.268
+        },
+        "prompt": {
+          "label": "Memory trong prompt",
+          "query_used": "Mức cao nhất bằng bao nhiêu lần mức thấp nhất?",
+          "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có. Bộ tài liệu đang dùng chỉ gồm quy chế đào tạo, quyết định học phí và thông báo dịch vụ sinh viên của ĐH Bách khoa Hà Nội.",
+          "correct": false,
+          "context_hit": true,
+          "refused": true,
+          "rewrite_s": 0.0,
+          "generation_s": 1.416
+        },
+        "rewrite": {
+          "label": "Memory + rewrite query",
+          "query_used": "Mức cao nhất của học bổng khuyến khích học tập bằng bao nhiêu lần mức thấp nhất?",
+          "answer": "Mức cao nhất của học bổng khuyến khích học tập (loại A) bằng 1,5 lần mức thấp nhất (loại C) [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.913,
+          "generation_s": 1.282
+        }
+      }
+    },
+    {
+      "id": "fu-02",
+      "category": "cảnh báo học tập",
+      "turn_1": "Sinh viên bị nâng một mức cảnh báo học tập khi nào?",
+      "turn_1_answer": "Sinh viên bị nâng một mức cảnh báo học tập khi có số tín chỉ không đạt trong học kỳ lớn hơn 8 [Document 2].",
+      "turn_2": "Thế còn nâng hai mức thì sao?",
+      "expected_any": [
+        "16"
+      ],
+      "why_needs_history": "'thế còn' là ellipsis; chủ ngữ và động từ đều nằm ở lượt trước.",
+      "variants": {
+        "none": {
+          "label": "Không memory",
+          "query_used": "Thế còn nâng hai mức thì sao?",
+          "answer": "Sinh viên sẽ bị nâng hai mức cảnh báo học tập nếu có số tín chỉ không đạt trong học kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập [Document 2].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.405
+        },
+        "prompt": {
+          "label": "Memory trong prompt",
+          "query_used": "Thế còn nâng hai mức thì sao?",
+          "answer": "Sinh viên bị nâng hai mức cảnh báo học tập khi có số tín chỉ không đạt trong học kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập [Document 2].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.427
+        },
+        "rewrite": {
+          "label": "Memory + rewrite query",
+          "query_used": "Sinh viên bị nâng hai mức cảnh báo học tập khi nào?",
+          "answer": "Sinh viên bị nâng hai mức cảnh báo học tập khi có số tín chỉ không đạt trong học kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập [Document 2].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.766,
+          "generation_s": 1.304
+        }
+      }
+    },
+    {
+      "id": "fu-03",
+      "category": "dịch vụ",
+      "turn_1": "Sinh viên đi vào cổng Parabol thì gửi xe ở đâu?",
+      "turn_1_answer": "Sinh viên đi vào cổng Parabol thì gửi xe tại các nhà xe D4-D6-D8 [Document 1].",
+      "turn_2": "Còn cổng Trần Đại Nghĩa?",
+      "expected_any": [
+        "C7"
+      ],
+      "why_needs_history": "Lượt 2 chỉ có một danh từ; phần hỏi 'gửi xe ở đâu' nằm ở lượt 1.",
+      "variants": {
+        "none": {
+          "label": "Không memory",
+          "query_used": "Còn cổng Trần Đại Nghĩa?",
+          "answer": "Sinh viên có thể gửi xe tại nhà xe C7 và D3 khi vào cổng Trần Đại Nghĩa [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.392
+        },
+        "prompt": {
+          "label": "Memory trong prompt",
+          "query_used": "Còn cổng Trần Đại Nghĩa?",
+          "answer": "Sinh viên đi vào cổng Trần Đại Nghĩa thì gửi xe tại nhà xe C7 và D3 [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.132
+        },
+        "rewrite": {
+          "label": "Memory + rewrite query",
+          "query_used": "Cổng Trần Đại Nghĩa thì gửi xe ở đâu?",
+          "answer": "Sinh viên đi vào cổng Trần Đại Nghĩa thì gửi xe tại nhà xe C7 và D3 [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 1.224,
+          "generation_s": 1.31
+        }
+      }
+    },
+    {
+      "id": "fu-04",
+      "category": "học bổng",
+      "turn_1": "Học bổng Trần Đại Nghĩa dành cho đối tượng nào?",
+      "turn_1_answer": "Học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo hoặc hộ có hoàn cảnh kinh tế đặc biệt khó khăn khác, sinh viên gặp tai nạn, rủi ro đột xuất) nhưng vẫn có kết quả học tập và rèn luyện tốt [Document 3].",
+      "turn_2": "Học bổng này có mấy mức?",
+      "expected_any": [
+        "2 mức",
+        "hai mức",
+        "50% và 100%"
+      ],
+      "why_needs_history": "'học bổng này' hồi chỉ Trần Đại Nghĩa; thiếu tiền ngữ thì retrieval kéo sang học bổng KKHT và trả lời '3 mức'.",
+      "variants": {
+        "none": {
+          "label": "Không memory",
+          "query_used": "Học bổng này có mấy mức?",
+          "answer": "Học bổng Khuyến khích học tập (KKHT) có 3 mức: loại C (Khá), loại B (Giỏi) và loại A (Xuất sắc) [Document 1].",
+          "correct": false,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.208
+        },
+        "prompt": {
+          "label": "Memory trong prompt",
+          "query_used": "Học bổng này có mấy mức?",
+          "answer": "Học bổng Trần Đại Nghĩa có 2 mức tương ứng với 50% và 100% học phí [Document 5].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.341
+        },
+        "rewrite": {
+          "label": "Memory + rewrite query",
+          "query_used": "Học bổng Trần Đại Nghĩa có mấy mức?",
+          "answer": "Học bổng Trần Đại Nghĩa có 2 mức hỗ trợ tương ứng với 50% và 100% học phí [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.85,
+          "generation_s": 1.244
+        }
+      }
+    },
+    {
+      "id": "fu-05",
+      "category": "cảnh báo học tập",
+      "turn_1": "Cảnh báo học tập mức 3 được áp dụng với sinh viên nào?",
+      "turn_1_answer": "Cảnh báo học tập mức 3 được áp dụng đối với sinh viên có số tín chỉ (TC) nợ đọng từ đầu khóa lớn hơn 24 [Document 1].",
+      "turn_2": "Còn khi nào thì được hạ một mức?",
+      "expected_any": [
+        "bằng 4",
+        "hơn 4",
+        "≤ 4",
+        "<= 4"
+      ],
+      "why_needs_history": "'hạ một mức' của cái gì — chỉ lượt 1 mới nói đang bàn về mức cảnh báo học tập.",
+      "variants": {
+        "none": {
+          "label": "Không memory",
+          "query_used": "Còn khi nào thì được hạ một mức?",
+          "answer": "Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số tín chỉ không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập. Sinh viên đang bị cảnh báo học tập mức 3, nếu số tín chỉ nợ đọng từ đầu khóa nhỏ hơn hoặc bằng 24 thì cũng được hạ cảnh báo học tập xuống mức 2 [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.805
+        },
+        "prompt": {
+          "label": "Memory trong prompt",
+          "query_used": "Còn khi nào thì được hạ một mức?",
+          "answer": "Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số tín chỉ không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập. Ngoài ra, sinh viên đang bị cảnh báo học tập mức 3, nếu số tín chỉ nợ đọng từ đầu khóa nhỏ hơn hoặc bằng 24 thì cũng được hạ cảnh báo học tập xuống mức 2 [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.79
+        },
+        "rewrite": {
+          "label": "Memory + rewrite query",
+          "query_used": "Khi nào thì sinh viên được hạ một mức?",
+          "answer": "Sinh viên được hạ một mức cảnh báo học tập trong các trường hợp sau:\n1. Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số tín chỉ không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập [Document 1].\n2. Sinh viên đang bị cảnh báo học tập mức 3, nếu số tín chỉ nợ đọng từ đầu khóa nhỏ hơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2 [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.799,
+          "generation_s": 2.167
+        }
+      }
+    },
+    {
+      "id": "fu-06",
+      "category": "dịch vụ",
+      "turn_1": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức ở đâu?",
+      "turn_1_answer": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức tại Hội trường C2 [Document 1].",
+      "turn_2": "Vào những ngày nào?",
+      "expected_any": [
+        "26/9",
+        "26.9",
+        "26/09"
+      ],
+      "why_needs_history": "Lượt 2 không có chủ thể nào; toàn bộ 'lễ tốt nghiệp đợt tháng 9/2026' nằm ở lượt 1.",
+      "variants": {
+        "none": {
+          "label": "Không memory",
+          "query_used": "Vào những ngày nào?",
+          "answer": "Lễ tốt nghiệp đợt tháng 9/2026 sẽ diễn ra vào sáng thứ 7 ngày 26/9/2026 và chiều Chủ nhật ngày 27/9/2026 [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.553
+        },
+        "prompt": {
+          "label": "Memory trong prompt",
+          "query_used": "Vào những ngày nào?",
+          "answer": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức vào sáng thứ 7 ngày 26/9/2026 và chiều Chủ nhật ngày 27/9/2026 [Document 1].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.843
+        },
+        "rewrite": {
+          "label": "Memory + rewrite query",
+          "query_used": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức vào những ngày nào?",
+          "answer": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức vào ngày 26 và 27 tháng 9 năm 2026 [Document 1].",
+          "correct": false,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.931,
+          "generation_s": 1.285
+        }
+      }
+    },
+    {
+      "id": "fu-07",
+      "category": "tốt nghiệp",
+      "turn_1": "Điều kiện để sinh viên được xét công nhận tốt nghiệp là gì?",
+      "turn_1_answer": "Sinh viên được xét công nhận tốt nghiệp nếu có đủ các điều kiện sau:\n\na) Đã hoàn thành đầy đủ các học phần theo yêu cầu của chương trình đào tạo trong thời gian quy định, bao gồm cả các học phần thuộc chương trình môn học Giáo dục thể chất và Giáo dục quốc phòng-an ninh.\n\nb) Đạt chuẩn ngoại ngữ đầu ra [Document 5].",
+      "turn_2": "Điểm trung bình tích lũy phải đạt bao nhiêu?",
+      "expected_any": [
+        "2,0",
+        "2.0"
+      ],
+      "why_needs_history": "Thiếu lượt 1 thì không rõ đang hỏi ngưỡng GPA cho việc gì — xét tốt nghiệp, xét học bổng hay cảnh báo học tập.",
+      "variants": {
+        "none": {
+          "label": "Không memory",
+          "query_used": "Điểm trung bình tích lũy phải đạt bao nhiêu?",
+          "answer": "Điểm trung bình tích lũy toàn khóa phải đạt từ 2,0 trở lên để đủ điều kiện tốt nghiệp [Document 5].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.124
+        },
+        "prompt": {
+          "label": "Memory trong prompt",
+          "query_used": "Điểm trung bình tích lũy phải đạt bao nhiêu?",
+          "answer": "Điểm trung bình tích lũy toàn khóa phải đạt từ 2,0 trở lên [Document 5].",
+          "correct": true,
+          "context_hit": true,
+          "refused": false,
+          "rewrite_s": 0.0,
+          "generation_s": 1.131
+        },
+        "rewrite": {
+          "label": "Memory + rewrite query",
+          "query_used": "Điểm trung bình tích lũy của sinh viên phải đạt bao nhiêu?",
+          "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có. Bộ tài liệu đang dùng chỉ gồm quy chế đào tạo, quyết định học phí và thông báo dịch vụ sinh viên của ĐH Bách khoa Hà Nội.",
+          "correct": false,
+          "context_hit": false,
+          "refused": true,
+          "rewrite_s": 1.094,
+          "generation_s": 1.447
+        }
+      }
+    }
+  ]
+}
