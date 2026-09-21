@@ -4,7 +4,7 @@
 
 - Họ và tên: Bùi Đức Vinh
 - Mã học viên: 2A202602801
-- Nhóm: <điền tên/số nhóm>
+- Nhóm: L3A
 - Repository/branch: `K4-L3A-RAG-Pipeline-BuiDucVinh-2A202602801` / `main`
 
 ## Cách nhóm làm việc
@@ -22,8 +22,8 @@ riêng của từng thành viên trong `reports/`.
 | Thu thập dữ liệu | Chọn đề tài dịch vụ sinh viên HUST, tải 4 PDF quy chế/quyết định, crawl 9 bài từ hust.edu.vn và ctt.hust.edu.vn | `src/task1_collect_legal_docs.py`, `src/task2_crawl_news.py` | Done |
 | Chuẩn hóa | Convert PDF/JSON sang Markdown kèm front matter `title/source/doc_type/url` | `src/task3_convert_markdown.py` | Done |
 | Chunking & index | Recursive 500/50, bge-m3, ChromaDB cosine, ID ổn định để upsert không nhân bản | `src/task4_chunking_indexing.py` | Done |
-| Dense + BM25 + RRF | Dense trả cosine score gốc; BM25Plus trên cùng corpus Chroma; RRF `1/(k+rank)`, fuse một lần | `src/task5..task7` | Done |
-| Fallback & pipeline | PageIndex vectorless có cache doc ID; fallback so với cosine score gốc; provider lỗi không làm sập pipeline | `src/task8`, `src/task9` | Done (PageIndex chưa chạy thật: không có API key) |
+| Dense + BM25 + RRF | Dense trả cosine score gốc; BM25Plus trên cùng corpus Chroma; RRF `1/(k+rank)`, fuse một lần | `src/task5_semantic_search.py`, `src/task6_lexical_search.py`, `src/task7_reranking.py` | Done |
+| Fallback & pipeline | PageIndex vectorless có cache doc ID; fallback so với cosine score gốc; provider lỗi không làm sập pipeline | `src/task8_pageindex_vectorless.py`, `src/task9_retrieval_pipeline.py` | Done (PageIndex chưa chạy thật: không có API key) |
 | Generation có citation | Gán nhãn `[Document N]` trước khi reorder, context có title/source, dispatch 3 provider, safe refusal | `src/task10_generation.py` | Done |
 | Chatbot | Streamlit hiển thị answer, nguồn, retrieval method, score, link nguồn; toggle hybrid/dense, cross-encoder, HyDE, memory | `app.py` | Done |
 | Hiệu chỉnh & đánh giá | Script calibrate threshold, kiểm chứng ground truth, A/B 5 config, A/B memory, sinh RESULT.md | `scripts/` | Done |

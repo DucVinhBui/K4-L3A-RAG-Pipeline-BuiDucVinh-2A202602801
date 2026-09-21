@@ -4,7 +4,7 @@
 
 - Họ và tên: Bùi Đức Thông
 - Mã học viên: 2A202602931
-- Nhóm: <điền tên/số nhóm>
+- Nhóm: L3A
 - Repository/branch: `K4-L3A-RAG-Pipeline-BuiDucVinh-2A202602801` / `main`
 
 ## Cách nhóm làm việc
