@@ -29,7 +29,10 @@ task2 crawl ───┘            │
               ┌─────────────┴─────────────┐
        task5 dense (cosine)        task6 BM25Plus
               └─────────────┬─────────────┘
+                            │        ┌── bonus: HyDE thêm 1 ranked list dense
+                            │        │
                      task7 RRF (k=60, fuse một lần)
+                            │        └── bonus: cross-encoder chấm lại pool
                             │
                 task9 fallback theo cosine score gốc
                        │ (< 0.59)        │ (≥ 0.59)
@@ -53,6 +56,10 @@ Quyết định thiết kế đáng chú ý:
   đúng domain, nên không phân biệt được gì.
 - **Selector nội dung khi crawl.** Crawl cả trang thì ~95% là menu điều hướng
   lặp trên mọi URL; mỗi nguồn khai báo `selector` trỏ vào khối bài viết.
+- **`retrieve()` giữ nguyên chữ ký trong contract.** Các nhánh bonus đi qua
+  `run_retrieval()` — cùng một cài đặt, thêm tham số. Nới chữ ký `retrieve()`
+  cho vừa tính năng mới sẽ làm hỏng test contract, tức là sửa đặc tả cho hợp
+  code thay vì ngược lại.
 
 ## Quick start
 
@@ -107,12 +114,39 @@ Hai phân phối tách sạch trong khoảng `(0.4882, 0.6820)` → chọn **0.5
 ```bash
 python -m scripts.verify_golden_dataset          # mọi ground truth phải có thật trong corpus
 python -m scripts.evaluate --retrieval-only      # hit-rate + latency, không tốn API
-python -m scripts.evaluate                       # thêm 4 metric RAGAS (cần OPENAI_API_KEY)
+python -m scripts.evaluate                       # 5 config + 4 metric RAGAS (cần OPENAI_API_KEY)
+python -m scripts.evaluate --benchmark-only      # chỉ đo lại latency, giữ nguyên điểm đã chấm
+python -m scripts.evaluate --rescore             # chấm lại từ answer đã lưu, không sinh lại
+python -m scripts.evaluate_memory                # A/B conversation memory trên câu follow-up
+python -m scripts.render_result                  # sinh RESULT.md từ eval_results.json
 ```
 
 Golden dataset: 18 câu hỏi trong `group_project/evaluation/golden_dataset.json`,
 mọi `expected_context` được script kiểm chứng là trích đúng từ corpus đã index.
 Kết quả và phân tích lỗi: [`group_project/evaluation/RESULT.md`](group_project/evaluation/RESULT.md).
+
+### Kết quả A/B
+
+Năm config, chung golden dataset / generator / evaluator / prompt / `top_k`:
+
+| | A dense | B hybrid+RRF | C cross-enc | D HyDE+RRF | E HyDE+cross-enc |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Trung bình 4 metric RAGAS | 0.806 | 0.763 | **0.830** | 0.805 | 0.807 |
+| Context hit-rate | 0.889 | 0.778 | **0.944** | 0.833 | **0.944** |
+| Median retrieval | 28 ms | 28 ms | 557 ms | 68 ms | 718 ms |
+| LLM call thêm / query | 0 | 0 | 0 | 1 | 1 |
+
+Hai kết quả đáng chú ý, cả hai đều đi ngược kỳ vọng:
+
+- **Hybrid + RRF thua dense-only.** Corpus có tài liệu gần trùng; BM25 xếp
+  hạng 1 cho bản gần trùng và RRF cho top-1 trọng số `1/61`, lớn hơn hạng 3
+  của dense (`1/63`), nên chunk đúng bị đẩy khỏi top-5.
+- **Cross-encoder sửa đúng chỗ đó.** Giữ nguyên pool ứng viên của B, chỉ thay
+  bước fuse: hit-rate 0.778 → 0.944. Xác nhận lỗi nằm ở việc tin vào thứ hạng
+  của BM25, không phải ở khâu lấy ứng viên.
+
+Gộp HyDE với cross-encoder (E) không cộng dồn: cross-encoder đã xử lý phần
+lỗi mà HyDE nhắm tới, nên E chỉ trả thêm 1 LLM call mà không hơn C.
 
 ## Kiểm tra
 
@@ -132,9 +166,17 @@ pytest -q
 ```
 src/task1..task10        pipeline theo docs/MODULE_CONTRACTS.md
 src/contracts.py         schema + validator dùng chung
+src/bonus_cross_encoder.py       rerank bằng bge-reranker-v2-m3
+src/bonus_query_expansion.py     HyDE
+src/bonus_conversation_memory.py viết lại follow-up theo lịch sử
 scripts/calibrate_threshold.py   hiệu chỉnh ngưỡng fallback
 scripts/verify_golden_dataset.py kiểm chứng ground truth
-scripts/evaluate.py      A/B dense-only vs hybrid + RRF
+scripts/evaluate.py      A/B 5 config retrieval
+scripts/evaluate_memory.py       A/B conversation memory
+scripts/render_result.py sinh RESULT.md từ kết quả đo
+tests/test_contracts.py  contract tests (15)
+tests/test_acceptance.py acceptance tests (5)
+tests/test_bonus.py      contract tests cho nhánh bonus (13), chạy offline
 app.py                   chatbot Streamlit
 data/landing/            file gốc (PDF, JSON crawl)
 data/standardized/       Markdown + front matter
