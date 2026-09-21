@@ -4,8 +4,16 @@
 
 - Họ và tên: Bùi Đức Vinh
 - Mã học viên: 2A202602801
-- Nhóm: làm cá nhân toàn bộ pipeline
+- Nhóm: <điền tên/số nhóm>
 - Repository/branch: `K4-L3A-RAG-Pipeline-BuiDucVinh-2A202602801` / `main`
+
+## Cách nhóm làm việc
+
+Nhóm thống nhất phương án theo từng module rồi giao tôi chạy prompt và commit
+tập trung, do chỉ tài khoản của tôi có quota. Vì vậy `git log` chỉ hiện một
+tác giả: tôi là người hiện thực toàn bộ code, còn các quyết định phương án,
+dữ liệu đánh giá và kiểm thử có đóng góp của cả nhóm — chi tiết ở báo cáo
+riêng của từng thành viên trong `reports/`.
 
 ## Phần việc đã thực hiện
 
