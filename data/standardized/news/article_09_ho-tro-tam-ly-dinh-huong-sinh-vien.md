@@ -1,0 +1,22 @@
+---
+title: "Đại học Bách khoa Hà Nội đồng hành cùng sinh viên tháo gỡ áp lực, định hướng tương lai"
+source: "article_09_ho-tro-tam-ly-dinh-huong-sinh-vien.json"
+doc_type: news
+url: "https://hust.edu.vn/vi/sinh-vien/ho-tro-sinh-vien/dai-hoc-bach-khoa-ha-noi-dong-hanh-cung-sinh-vien-thao-go-ap-luc-dinh-huong-tuong-lai-654627.html"
+date_crawled: "2026-09-21T17:25:10"
+---
+
+Sự kiện hướng đến mục tiêu hỗ trợ sinh viên tháo gỡ những áp lực trong quá trình định hướng tương lai, từ sự mông lung về nghề nghiệp, áp lực đồng trang lứa đến những lo lắng trước sự thay đổi không ngừng của xã hội.
+![Ban cong tac sinh vien hust](https://hust.edu.vn/uploads/sys/sinh-vien/2026_05/ban-cong-tac-sinh-vien-hust.jpg) PGS.TS. Phạm Thanh Huyền - Trưởng Ban Công tác sinh viên phát biểu tại sự kiện
+Đồng hành và chia sẻ tại tọa đàm là hai diễn giả quốc tế uy tín trong lĩnh vực trí tuệ cảm xúc (EQ) và phát triển con người:
+  * Bà Christiane Muller – Chuyên gia quản trị, tư vấn EQ với hơn 20 năm làm việc tại các tập đoàn và tổ chức quốc tế.
+  * Ông Francis L. Kaya – Chuyên gia quốc tế về EQ và tâm thức với hơn 25 năm nghiên cứu, giảng dạy tại 45 quốc gia.
+![Bà Christiane Muller ](https://hust.edu.vn/uploads/sys/sinh-vien/2026_05/tri-tue-cam-xuc-eq.jpg) Bà Christiane Muller
+![giai toa ap luc](https://hust.edu.vn/uploads/sys/sinh-vien/2026_05/giai-toa-ap-luc_1.jpg) Ông Francis L. Kaya
+
+Tại đây, các diễn giả đã mang đến nhiều chia sẻ thực tiễn về quản trị cảm xúc, vượt qua trạng thái trì hoãn và chuyển hóa áp lực thành động lực phát triển.Không khí hội trường diễn ra sôi nổi với nhiều trao đổi, tương tác từ sinh viên về những băn khoăn trong học tập, lựa chọn nghề nghiệp và định hướng tương lai.
+![DSC04365](https://hust.edu.vn/uploads/sys/sinh-vien/2026_05/dsc04365.jpg)
+![Toa dam het mong lung tim dung loi](https://hust.edu.vn/uploads/sys/sinh-vien/2026_05/toa-dam-het-mong-lung-tim-dung-loi.jpg)
+Thông qua chương trình, Ban Công tác Sinh viên mong muốn góp phần tạo ra không gian kết nối, lắng nghe và hỗ trợ sinh viên không chỉ trong học tập mà còn trong hành trình phát triển toàn diện về kỹ năng, tư duy và sức khỏe tinh thần.
+![sinh vien bach khoa](https://hust.edu.vn/uploads/sys/sinh-vien/2026_05/sinh-vien-bach-khoa.jpg)
+Tọa đàm “Định hướng tương lai: Hết mông lung, tìm đúng lối” đã khép lại với nhiều cảm xúc và giá trị tích cực, để lại những bài học ý nghĩa và nguồn cảm hứng cho đông đảo sinh viên tham dự.

@@ -1,0 +1,56 @@
+---
+title: "Học bổng Bách khoa chờ tân sinh viên K70 chinh phục ngay từ năm học đầu tiên"
+source: "article_05_hoc-bong-tan-sinh-vien-k70.json"
+doc_type: news
+url: "https://hust.edu.vn/vi/news/tin-tuc-su-kien/hoc-bong-bach-khoa-cho-tan-sinh-vien-k70-chinh-phuc-ngay-tu-nam-hoc-dau-tien-655566.html"
+date_crawled: "2026-09-21T17:25:04"
+---
+
+**_Tháng 9 này, Đại học Bách khoa Hà Nội sẽ hân hoan chào đón những tân sinh viên khóa 70. Giữa bao háo hức và bỡ ngỡ của hành trình mới, các bạn không chỉ mang theo sách vở, laptop hay giấy báo trúng tuyển,… mà còn mang theo một niềm tin mãnh liệt: “Mình sẽ chinh phục được học bổng ngay từ năm học đầu tiên.”_**
+
+Cùng khám phá những cánh cửa học bổng đang mở ra chờ đón tân sinh viên K70 nhé!
+
+**_> >> Chi tiết các học bổng tại Đại học Bách khoa Hà Nội xem [TẠI ĐÂY](https://ctsv.hust.edu.vn/#/so-tay-sv/61/hoc-bong)_**
+
+**Học bổng Khuyến khích học tập: Cứ bền bỉ, cơ hội sẽ đến**
+
+Năm học 2024 – 2025, Đại học Bách khoa Hà Nội dành khoảng 70 tỷ đồng cho quỹ học bổng Khuyến khích học tập (KKHT), xét cấp cho sinh viên có kết quả học tập và rèn luyện tốt. Với sinh viên năm Nhất, học bổng KKHT bắt đầu xét từ kỳ 2.
+
+Học bổng được xét theo học kỳ, với 3 mức:
+
+Loại C (Khá): Tương đương học phí phải đóng;
+
+Loại B (Giỏi): Bằng 1,2 lần học bổng loại C;
+
+Loại A (Xuất sắc): Bằng 1,5 lần học bổng loại C.
+
+Điều kiện xét cấp học bổng rất rõ ràng: Chỉ cần kết quả học tập và rèn luyện đạt từ khá, giỏi, xuất sắc trở lên. Sinh viên không cần nộp đơn đăng ký, học bổng sẽ được xét tự động.
+
+Điều đó có nghĩa: Bạn chỉ cần kiên trì và nỗ lực, cánh cửa học bổng luôn rộng mở.
+
+**Học bổng Trần Đại Nghĩa: Mỗi giấc mơ đều xứng đáng đi tiếp**
+
+Được đặt theo tên vị Hiệu trưởng đầu tiên của Đại học Bách khoa Hà Nội, học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh đặc biệt khó khăn nhưng vẫn vững vàng trong học tập và rèn luyện.
+
+Học bổng Trần Đại Nghĩa được xét theo học kỳ, với hai mức hỗ trợ: 50% hoặc 100% học phí.
+
+Học bổng không chỉ là sự giúp đỡ về tài chính, mà còn là lời nhắn gửi đầy nhân văn: “Ở Bách khoa Hà Nội, kinh tế không bao giờ được trở thành rào cản trên con đường bạn theo đuổi ước mơ.”
+
+![hbdn](https://hust.edu.vn/uploads/sys/news/2025_08/hbdn.jpg) Các học bổng tài trợ từ doanh nghiệp, tổ chức nâng bước sinh viên Bách khoa **Học bổng tài trợ: Cánh cửa từ doanh nghiệp, tổ chức**
+
+Mỗi năm, sinh viên Bách khoa nhận được khoảng 5 - 7 tỷ đồng học bổng tài trợ từ các cá nhân, tổ chức, doanh nghiệp trong và ngoài nước: PTSC, Petrolimex, EVN, TKV, MB Bank, Sumitomo, Toyota, Toshiba, Nitori, LG Innotek, Lotte, Posco, Mirae Asset, Kumho Asiana, quỹ Chắp cánh, Nhà giáo Bùi Long Biên...
+
+Những suất học bổng trị giá hàng chục triệu đồng không chỉ ghi nhận nỗ lực học tập và nghiên cứu, mà còn mở ra cơ hội thực tập, tuyển dụng, tham gia dự án thực tế, một tấm vé bước vào thế giới nghề nghiệp rộng lớn.
+
+Cùng với việc trao học bổng cho các sinh viên và học viên cao học vượt khó vươn lên dựa trên kết quả CPA, năm 2025, lần đầu tiên Quỹ Chắp cánh Bách khoa trao học bổng cho tân sinh viên K70 có hoàn cảnh khó khăn, giàu ý chí vươn lên và đam mê học hỏi, dựa trên thành tích xuất sắc trong kỳ thi THPT và tuyển sinh đại học.
+
+Đây không chỉ là hỗ trợ tài chính, mà còn là một lời nhắn nhủ đầy yêu thương: “Bạn không đơn độc trên hành trình đại học. Ở Bách khoa luôn có những người đồng hành và tiếp sức sinh viên.”
+
+Mỗi suất học bổng tại Đại học Bách khoa Hà Nội đều hướng đến một mục tiêu chung: Tiếp thêm niềm tin, nghị lực và động lực cho sinh viên trên hành trình tri thức. Các tân sinh viên hãy luôn vững tin bởi ở Bách khoa luôn có những bàn tay thầm lặng sẵn sàng nâng đỡ bạn. Và sau này, khi bước trên con đường thành công, ngoảnh nhìn lại, bạn sẽ thấy: Đôi khi, chỉ một suất học bổng đúng lúc cũng có thể làm thay đổi cả tương lai!
+
+|
+*** Sinh viên Bách khoa từ năm Ba có thêm Học bổng Trao đổi sinh viên quốc tế: Cơ hội đi học tập nâng cao trình độ chuyên môn, ngoại ngữ, phát triển kỹ năng tại các trường đối tác nước ngoài;
+
+* Sinh viên năm cuối có thêm Học bổng Gắn kết quê hương: Học viên chương trình kỹ sư chuyên sâu đặc thù có đồ án/khóa luận tốt nghiệp góp phần cải tiến, nâng cao chất lượng, hiệu quả kinh doanh, sản xuất hoặc chất lượng các dịch vụ an sinh xã hội tại quê hương của sinh viên/học viên.**
+ |
+| --- |
