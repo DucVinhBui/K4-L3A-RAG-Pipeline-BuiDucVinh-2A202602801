@@ -1,0 +1,1021 @@
+{
+  "run": {
+    "generator_model": "openai/gpt-4o-mini",
+    "evaluator_model": "gpt-4o-mini",
+    "embedding_model": "BAAI/bge-m3",
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "top_k": 5,
+    "score_threshold": 0.59,
+    "golden_dataset_size": 18,
+    "retrieval_only": false
+  },
+  "configs": {
+    "A_dense_only": {
+      "label": "Config A — dense-only",
+      "context_hit_rate": 0.8888888888888888,
+      "mean_retrieval_s": 0.1681388888888889,
+      "mean_generation_s": 1.6019444444444444,
+      "rows": [
+        {
+          "id": "hb-01",
+          "category": "học bổng",
+          "user_input": "Học bổng khuyến khích học tập của Bách khoa Hà Nội có mấy mức?",
+          "retrieved_contexts": [
+            "**_> >> Chi tiết các học bổng tại Đại học Bách khoa Hà Nội xem [TẠI ĐÂY](https://ctsv.hust.edu.vn/#/so-tay-sv/61/hoc-bong)_**\n\n**Học bổng Khuyến khích học tập: Cứ bền bỉ, cơ hội sẽ đến**\n\nNăm học 2024 – 2025, Đại học Bách khoa Hà Nội dành khoảng 70 tỷ đồng cho quỹ học bổng Khuyến khích học tập (KKHT), xét cấp cho sinh viên có kết quả học tập và rèn luyện tốt. Với sinh viên năm Nhất, học bổng KKHT bắt đầu xét từ kỳ 2.\n\nHọc bổng được xét theo học kỳ, với 3 mức:",
+            "Học bổng dành cho sinh viên Đại học Bách khoa Hà Nội (cập nhật đến 6/2025)/ Scholarships for Students of Hanoi University of Science and Technology (updated to June 2025):\n\n1. **Học bổng Khuyến khích học tập** : Dành cho sinh viên có kết quả học tập và rèn luyện tốt/ **Academic Encouragement Scholarship:** For students with strong academic performance and good conduct.",
+            "**_Đại học Bách khoa Hà Nội có nhiều nguồn học bổng dành cho sinh viên. Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm Quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Với các bạn sinh viên có hoàn cảnh khó khăn, có rất nhiều cơ hội tiếp cận các nguồn học bổng có giá trị: Học bổng KKHT, học bổng Trần Đại Nghĩa (dành cho sinh viên có hoàn cảnh khó khăn), học bổng từ doanh nghiệp…_\n\nHọc bổng khuyến khích học tập (KKHT)**",
+            "Từ năm 2024, Đại học Bách khoa Hà Nội bắt đầu triển khai chương trình cấp học bổng cho sinh viên sang học tập, thực tập ngắn hạn tại các trường đối tác nước ngoài. Kinh phí học bổng dành cho năm 2024 là 5 tỷ đồng",
+            "khích học tập và học bổng chính sách cho sinh viên căn cứ theo các thông tư liên tịch,\ncác quy định hiện hành của Bộ Giáo dục và Đào tạo. Việc xét học bổng tài trợ thực\nhiện theo những điều kiện và quy trình riêng. Trường Đại học Bách Khoa Hà Nội quy\nđịnh một số điểm bổ sung như sau:\na) Các loại học bổng chỉ được cấp trong thời gian thiết kế của khóa học. Thời gian\nnghỉ học tạm thời, thời gian kéo dài và thời gian học lấy bằng thứ hai không được xét\ncấp học bổng."
+          ],
+          "reference_contexts": [
+            "Học bổng KKHT được xét theo học kỳ và có 3 mức:"
+          ],
+          "response": "Học bổng khuyến khích học tập của Bách khoa Hà Nội có 3 mức [Document 1].",
+          "reference": "Học bổng khuyến khích học tập có 3 mức: loại C (khá) tương đương mức học phí sinh viên phải đóng, loại B (giỏi) bằng 1,2 lần loại C, và loại A (xuất sắc) bằng 1,5 lần loại C.",
+          "context_hit": false,
+          "retrieval_s": 0.0969,
+          "generation_s": 3.124
+        },
+        {
+          "id": "hb-02",
+          "category": "học bổng",
+          "user_input": "Điều kiện để được xét học bổng khuyến khích học tập loại xuất sắc là gì?",
+          "retrieved_contexts": [
+            "_Điều kiện được xét, cấp học bổng KKHT:_\n\n• Học bổng loại khá: Sinh viên có kết quả học tập và rèn luyện đạt từ loại khá trở lên.\n\n• Học bổng loại giỏi: Sinh viên có kết quả học tập và rèn luyện đạt từ loại giỏi trở lên.\n\n• Học bổng loại xuất sắc: Sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên.\n\nCăn cứ vào kết quả học tập và rèn luyện Nhà trường sẽ tổ chức xét cấp học bổng cho sinh viên (sinh viên không cần phải đăng ký).",
+            "Học bổng khuyến khích học tập (KKHT)**\n\nNăm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Học bổng KKHT được xét theo học kỳ và có 3 mức:\n\n• Học bổng loại khá (loại C): Tương đương với mức học phí sinh viên phải đóng;\n\n• Học bổng loại giỏi (loại B): Bằng 1,2 lần học bổng loại khá;\n\n• Học bổng loại xuất sắc (loại A): Bằng 1,5 lần học bổng loại khá.\n\n_Điều kiện được xét, cấp học bổng KKHT:_",
+            "Học bổng được xét theo học kỳ, với 3 mức:\n\nLoại C (Khá): Tương đương học phí phải đóng;\n\nLoại B (Giỏi): Bằng 1,2 lần học bổng loại C;\n\nLoại A (Xuất sắc): Bằng 1,5 lần học bổng loại C.\n\nĐiều kiện xét cấp học bổng rất rõ ràng: Chỉ cần kết quả học tập và rèn luyện đạt từ khá, giỏi, xuất sắc trở lên. Sinh viên không cần nộp đơn đăng ký, học bổng sẽ được xét tự động.\n\nĐiều đó có nghĩa: Bạn chỉ cần kiên trì và nỗ lực, cánh cửa học bổng luôn rộng mở.",
+            "cấp học bổng.\nb) Học bổng chính sách được cấp theo quyết định của Hiệu trưởng Nhà trường trên\ncơ sở hồ sơ của sinh viên được xét công nhận là đầy đủ và chính xác. Các trường hợp\ntrễ hạn sẽ không được truy lĩnh. Ngoài thời gian chính thức của khóa học, học bổng\nchính sách chỉ được cấp nếu trường nhận được chỉ tiêu học bổng bổ sung từ cấp trên.\nc) Điều kiện cần để xét học bổng khuyến khích: sinh viên đăng ký học, dự thi và",
+            "xét khen thưởng. Điều kiện và hình thức xét khen thưởng được quy định cụ thể trong\nQuy định về công tác quản lý sinh viên của trường ĐHBK Hà Nội. Ngoài ra, những\nsinh viên xuất sắc nhất còn có cơ hội được nhận học bổng khuyến khích và học bổng\ntài trợ.\nĐiều 35. Học bổng\nHọc bổng gồm các loại: Học bổng khuyến khích học tập, học bổng chính sách và\nhọc bổng tài trợ của các tổ chức và cá nhân. Việc thực hiện chế độ học bổng khuyến"
+          ],
+          "reference_contexts": [
+            "Học bổng loại xuất sắc: Sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên."
+          ],
+          "response": "Điều kiện để được xét học bổng khuyến khích học tập loại xuất sắc là sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên [Document 1].",
+          "reference": "Sinh viên phải có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên. Sinh viên không cần đăng ký, nhà trường tự tổ chức xét cấp.",
+          "context_hit": true,
+          "retrieval_s": 0.1933,
+          "generation_s": 3.708
+        },
+        {
+          "id": "hb-03",
+          "category": "học bổng",
+          "user_input": "Học bổng Trần Đại Nghĩa dành cho đối tượng nào và có mấy mức?",
+          "retrieved_contexts": [
+            "**Học bổng Trần Đại Nghĩa**\n\nHọc bổng Trần Đại Nghĩa là Học bổng của Đại học Bách khoa Hà Nội xét cấp cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo hoặc hộ có hoàn cảnh kinh tế đặc biệt khó khăn khác, sinh viên gặp tai nạn, rủi ro đột xuất) có kết quả học tập và rèn luyện tốt.\n\nHọc bổng Trần Đại Nghĩa xét theo học kỳ và có 2 mức tương ứng với 50% và 100% học phí.",
+            "**Học bổng Trần Đại Nghĩa: Mỗi giấc mơ đều xứng đáng đi tiếp**\n\nĐược đặt theo tên vị Hiệu trưởng đầu tiên của Đại học Bách khoa Hà Nội, học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh đặc biệt khó khăn nhưng vẫn vững vàng trong học tập và rèn luyện.\n\nHọc bổng Trần Đại Nghĩa được xét theo học kỳ, với hai mức hỗ trợ: 50% hoặc 100% học phí.",
+            "2. **Học bổng Trần Đại Nghĩa** : Dành cho sinh viên có hoàn cảnh khó khăn, có nghị lực vươn lên trong cuộc sống/ **Trần Đại Nghĩa Scholarship:** For students facing difficult circumstances who demonstrate strong determination and resilience.\n\n3. **Học bổng tài trợ** : Dành cho sinh viên có kết quả học tập tốt, sinh viên có hoàn cảnh khó khăn/ **Sponsored Scholarships:** For students with good academic results or those in disadvantaged situations.",
+            "**Học bổng gắn kết quê hương**\n\nĐối tượng cấp Học bổng: Học bổng cấp cho sinh viên, học viên chương trình kỹ sư chuyên sâu đặc thù có đồ án/khóa luận tốt nghiệp (ĐANT) có đồ án tốt nghiệp/khóa luận tốt nghiệp góp phần cải tiến, nâng cao chất lượng, hiệu quả kinh doanh, sản xuất hoặc chất lượng các dịch vụ an sinh xã hội tại quê hương của sinh viên/học viên.\n\nMức học bổng: Học bổng có trị giá 5 triệu đồng/ĐATN.",
+            "Xem chi tiết Quy định về việc xét cấp Học bổng Trần Đại Nghĩa sinh viên **TẠI ĐÂY**."
+          ],
+          "reference_contexts": [
+            "Học bổng Trần Đại Nghĩa xét theo học kỳ và có 2 mức tương ứng với 50% và 100% học phí."
+          ],
+          "response": "Học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo hoặc hộ có hoàn cảnh kinh tế đặc biệt khó khăn khác, sinh viên gặp tai nạn, rủi ro đột xuất) có kết quả học tập và rèn luyện tốt. Học bổng này có 2 mức hỗ trợ tương ứng với 50% và 100% học phí [Document 1].",
+          "reference": "Học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo, gặp tai nạn hoặc rủi ro đột xuất) nhưng có kết quả học tập và rèn luyện tốt. Học bổng xét theo học kỳ và có 2 mức tương ứng 50% và 100% học phí.",
+          "context_hit": true,
+          "retrieval_s": 0.2063,
+          "generation_s": 2.071
+        },
+        {
+          "id": "hb-04",
+          "category": "học bổng",
+          "user_input": "Năm học 2023-2024 nhà trường dành bao nhiêu tiền cho quỹ học bổng khuyến khích học tập?",
+          "retrieved_contexts": [
+            "Học bổng khuyến khích học tập (KKHT)**\n\nNăm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Học bổng KKHT được xét theo học kỳ và có 3 mức:\n\n• Học bổng loại khá (loại C): Tương đương với mức học phí sinh viên phải đóng;\n\n• Học bổng loại giỏi (loại B): Bằng 1,2 lần học bổng loại khá;\n\n• Học bổng loại xuất sắc (loại A): Bằng 1,5 lần học bổng loại khá.\n\n_Điều kiện được xét, cấp học bổng KKHT:_",
+            "**_Đại học Bách khoa Hà Nội có nhiều nguồn học bổng dành cho sinh viên. Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm Quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Với các bạn sinh viên có hoàn cảnh khó khăn, có rất nhiều cơ hội tiếp cận các nguồn học bổng có giá trị: Học bổng KKHT, học bổng Trần Đại Nghĩa (dành cho sinh viên có hoàn cảnh khó khăn), học bổng từ doanh nghiệp…_\n\nHọc bổng khuyến khích học tập (KKHT)**",
+            "### KẾT QUẢ XÉT CẤP HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP KỲ I NĂM HỌC 2024-2025\nNhà trường trân trọng thông báo và chúc mừng **1.056 sinh viên** có kết quả học tập và rèn luyện xuất sắc được học bổng khuyến khích học tập học kỳ I năm học 2024-2025.\n\nHọc bổng được xét theo khóa ngành, trong đó có:\n\n  * 729 sinh viên đạt học bổng loại xuất sắc (loại A)\n  * 237 sinh viên đạt học bổng loại giỏi (loại B)\n  * 90 sinh viên đạt học bổng loại khá (loại C)",
+            "Từ năm 2024, Đại học Bách khoa Hà Nội bắt đầu triển khai chương trình cấp học bổng cho sinh viên sang học tập, thực tập ngắn hạn tại các trường đối tác nước ngoài. Kinh phí học bổng dành cho năm 2024 là 5 tỷ đồng",
+            "**_> >> Chi tiết các học bổng tại Đại học Bách khoa Hà Nội xem [TẠI ĐÂY](https://ctsv.hust.edu.vn/#/so-tay-sv/61/hoc-bong)_**\n\n**Học bổng Khuyến khích học tập: Cứ bền bỉ, cơ hội sẽ đến**\n\nNăm học 2024 – 2025, Đại học Bách khoa Hà Nội dành khoảng 70 tỷ đồng cho quỹ học bổng Khuyến khích học tập (KKHT), xét cấp cho sinh viên có kết quả học tập và rèn luyện tốt. Với sinh viên năm Nhất, học bổng KKHT bắt đầu xét từ kỳ 2.\n\nHọc bổng được xét theo học kỳ, với 3 mức:"
+          ],
+          "reference_contexts": [
+            "Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT"
+          ],
+          "response": "Năm học 2023-2024, nhà trường dành khoảng 70 tỷ đồng cho quỹ học bổng khuyến khích học tập. [Document 1]",
+          "reference": "Khoảng 70 tỷ đồng.",
+          "context_hit": true,
+          "retrieval_s": 0.2343,
+          "generation_s": 1.134
+        },
+        {
+          "id": "hb-05",
+          "category": "học bổng",
+          "user_input": "Sinh viên có phải nộp đơn để được xét học bổng khuyến khích học tập không?",
+          "retrieved_contexts": [
+            "Học bổng được xét theo học kỳ, với 3 mức:\n\nLoại C (Khá): Tương đương học phí phải đóng;\n\nLoại B (Giỏi): Bằng 1,2 lần học bổng loại C;\n\nLoại A (Xuất sắc): Bằng 1,5 lần học bổng loại C.\n\nĐiều kiện xét cấp học bổng rất rõ ràng: Chỉ cần kết quả học tập và rèn luyện đạt từ khá, giỏi, xuất sắc trở lên. Sinh viên không cần nộp đơn đăng ký, học bổng sẽ được xét tự động.\n\nĐiều đó có nghĩa: Bạn chỉ cần kiên trì và nỗ lực, cánh cửa học bổng luôn rộng mở.",
+            "_Điều kiện được xét, cấp học bổng KKHT:_\n\n• Học bổng loại khá: Sinh viên có kết quả học tập và rèn luyện đạt từ loại khá trở lên.\n\n• Học bổng loại giỏi: Sinh viên có kết quả học tập và rèn luyện đạt từ loại giỏi trở lên.\n\n• Học bổng loại xuất sắc: Sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên.\n\nCăn cứ vào kết quả học tập và rèn luyện Nhà trường sẽ tổ chức xét cấp học bổng cho sinh viên (sinh viên không cần phải đăng ký).",
+            "cấp học bổng.\nb) Học bổng chính sách được cấp theo quyết định của Hiệu trưởng Nhà trường trên\ncơ sở hồ sơ của sinh viên được xét công nhận là đầy đủ và chính xác. Các trường hợp\ntrễ hạn sẽ không được truy lĩnh. Ngoài thời gian chính thức của khóa học, học bổng\nchính sách chỉ được cấp nếu trường nhận được chỉ tiêu học bổng bổ sung từ cấp trên.\nc) Điều kiện cần để xét học bổng khuyến khích: sinh viên đăng ký học, dự thi và",
+            "Học bổng khuyến khích học tập (KKHT)**\n\nNăm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Học bổng KKHT được xét theo học kỳ và có 3 mức:\n\n• Học bổng loại khá (loại C): Tương đương với mức học phí sinh viên phải đóng;\n\n• Học bổng loại giỏi (loại B): Bằng 1,2 lần học bổng loại khá;\n\n• Học bổng loại xuất sắc (loại A): Bằng 1,5 lần học bổng loại khá.\n\n_Điều kiện được xét, cấp học bổng KKHT:_",
+            "khích học tập và học bổng chính sách cho sinh viên căn cứ theo các thông tư liên tịch,\ncác quy định hiện hành của Bộ Giáo dục và Đào tạo. Việc xét học bổng tài trợ thực\nhiện theo những điều kiện và quy trình riêng. Trường Đại học Bách Khoa Hà Nội quy\nđịnh một số điểm bổ sung như sau:\na) Các loại học bổng chỉ được cấp trong thời gian thiết kế của khóa học. Thời gian\nnghỉ học tạm thời, thời gian kéo dài và thời gian học lấy bằng thứ hai không được xét\ncấp học bổng."
+          ],
+          "reference_contexts": [
+            "sinh viên không cần phải đăng ký"
+          ],
+          "response": "Sinh viên không cần nộp đơn để được xét học bổng khuyến khích học tập, học bổng sẽ được xét tự động dựa trên kết quả học tập và rèn luyện. [Document 1]",
+          "reference": "Không. Nhà trường căn cứ kết quả học tập và rèn luyện để tổ chức xét cấp, sinh viên không cần phải đăng ký.",
+          "context_hit": true,
+          "retrieval_s": 0.0966,
+          "generation_s": 1.27
+        },
+        {
+          "id": "cb-01",
+          "category": "cảnh báo học tập",
+          "user_input": "Sinh viên bị nâng một mức cảnh báo học tập trong trường hợp nào?",
+          "retrieved_contexts": [
+            "quy định như sau:\na) Sinh viên bị nâng một mức cảnh cáo học tập khi phạm vào một trong các điều\nkiện sau:\n- Điểm trung bình học kỳ đạt dưới 0,6 đối với học kỳ đầu tiên, 0,8 đối với học kỳ\nthứ hai và dưới 1,0 đối với các học kỳ tiếp theo của khóa học.\n- Điểm trung bình tích lũy đạt dưới 1,0 đối với sinh viên trình độ năm thứ hai,\ndưới 1,20 đối với sinh viên trình độ năm thứ ba và dưới 1,50 đối với sinh viên\ncác năm tiếp theo.",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24.",
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "15\ntập này không phụ thuộc vào điều kiện nâng mức cảnh báo học tập tại mục a và mục b\nkhoản này.\ne) Không xét cảnh báo học tập với học kỳ hè.\n2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh báo\nhọc tập từ mức 2 trở lên đăng ký số TC học phần ít hơn bình thường tại học kỳ 1 của năm\nhọc, cụ thể như sau:\na) Sinh viên thuộc các CTĐT chuẩn được đăng ký tối đa 14 TC và tối thiểu 8 TC cho\nmột học kỳ chính;"
+          ],
+          "reference_contexts": [
+            "Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học"
+          ],
+          "response": "Sinh viên bị nâng một mức cảnh báo học tập khi có số tín chỉ không đạt trong học kỳ lớn hơn 8 hoặc khi điểm trung bình học kỳ đạt dưới 0,6 đối với học kỳ đầu tiên, 0,8 đối với học kỳ thứ hai và dưới 1,0 đối với các học kỳ tiếp theo của khóa học [Document 1].",
+          "reference": "Khi số tín chỉ không đạt trong học kỳ lớn hơn 8.",
+          "context_hit": true,
+          "retrieval_s": 0.2202,
+          "generation_s": 1.452
+        },
+        {
+          "id": "cb-02",
+          "category": "cảnh báo học tập",
+          "user_input": "Khi nào sinh viên bị nâng hai mức cảnh báo học tập?",
+          "retrieved_contexts": [
+            "quy định như sau:\na) Sinh viên bị nâng một mức cảnh cáo học tập khi phạm vào một trong các điều\nkiện sau:\n- Điểm trung bình học kỳ đạt dưới 0,6 đối với học kỳ đầu tiên, 0,8 đối với học kỳ\nthứ hai và dưới 1,0 đối với các học kỳ tiếp theo của khóa học.\n- Điểm trung bình tích lũy đạt dưới 1,0 đối với sinh viên trình độ năm thứ hai,\ndưới 1,20 đối với sinh viên trình độ năm thứ ba và dưới 1,50 đối với sinh viên\ncác năm tiếp theo.",
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24.",
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "15\ntập này không phụ thuộc vào điều kiện nâng mức cảnh báo học tập tại mục a và mục b\nkhoản này.\ne) Không xét cảnh báo học tập với học kỳ hè.\n2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh báo\nhọc tập từ mức 2 trở lên đăng ký số TC học phần ít hơn bình thường tại học kỳ 1 của năm\nhọc, cụ thể như sau:\na) Sinh viên thuộc các CTĐT chuẩn được đăng ký tối đa 14 TC và tối thiểu 8 TC cho\nmột học kỳ chính;"
+          ],
+          "reference_contexts": [
+            "lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập"
+          ],
+          "response": "Sinh viên bị nâng hai mức cảnh báo học tập khi có số tín chỉ không đạt trong học kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập [Document 3].",
+          "reference": "Khi số tín chỉ không đạt trong học kỳ lớn hơn 16, hoặc khi sinh viên tự ý bỏ học, không đăng ký học tập.",
+          "context_hit": true,
+          "retrieval_s": 0.2224,
+          "generation_s": 1.514
+        },
+        {
+          "id": "cb-03",
+          "category": "cảnh báo học tập",
+          "user_input": "Cảnh báo học tập mức 3 được áp dụng với sinh viên nào?",
+          "retrieved_contexts": [
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24.",
+            "được chuẩn tiếng Anh theo yêu cầu, sinh viên mới tiếp tục đăng ký học tập theo\nchương trình chuyên môn.\nĐiều 27. Cảnh cáo học tập\n1. Cảnh cáo học tập là hình thức cảnh báo cho sinh viên về kết quả học tập yếu kém\ncủa bản thân, đồng thời là cơ sở để Nhà trường xem xét điều kiện buộc thôi học.\n2. Cảnh cáo học tập có 3 mức (1, 2, 3), có tính tích lũy và tính giảm nhẹ. Tại thời\nđiểm tiến hành xử lý học tập cuối mỗi học kỳ chính, các mức cảnh cáo học tập được\nquy định như sau:",
+            "quy định như sau:\na) Sinh viên bị nâng một mức cảnh cáo học tập khi phạm vào một trong các điều\nkiện sau:\n- Điểm trung bình học kỳ đạt dưới 0,6 đối với học kỳ đầu tiên, 0,8 đối với học kỳ\nthứ hai và dưới 1,0 đối với các học kỳ tiếp theo của khóa học.\n- Điểm trung bình tích lũy đạt dưới 1,0 đối với sinh viên trình độ năm thứ hai,\ndưới 1,20 đối với sinh viên trình độ năm thứ ba và dưới 1,50 đối với sinh viên\ncác năm tiếp theo."
+          ],
+          "reference_contexts": [
+            "Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa"
+          ],
+          "response": "Cảnh báo học tập mức 3 được áp dụng đối với sinh viên có số tín chỉ (TC) nợ đọng từ đầu khóa lớn hơn 24 [Document 1].",
+          "reference": "Sinh viên có số tín chỉ nợ đọng từ đầu khóa lớn hơn 24.",
+          "context_hit": true,
+          "retrieval_s": 0.2151,
+          "generation_s": 1.089
+        },
+        {
+          "id": "cb-04",
+          "category": "cảnh báo học tập",
+          "user_input": "Sinh viên đang bị cảnh báo học tập mức 1 hoặc mức 2 được hạ mức khi nào?",
+          "retrieved_contexts": [
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "quy định như sau:\na) Sinh viên bị nâng một mức cảnh cáo học tập khi phạm vào một trong các điều\nkiện sau:\n- Điểm trung bình học kỳ đạt dưới 0,6 đối với học kỳ đầu tiên, 0,8 đối với học kỳ\nthứ hai và dưới 1,0 đối với các học kỳ tiếp theo của khóa học.\n- Điểm trung bình tích lũy đạt dưới 1,0 đối với sinh viên trình độ năm thứ hai,\ndưới 1,20 đối với sinh viên trình độ năm thứ ba và dưới 1,50 đối với sinh viên\ncác năm tiếp theo.",
+            "nhỏ hơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2.\n\ne) Không xem xét cảnh báo học tập với học kỳ hè.\n\n2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh\nbáo  học  tập  hoặc  chưa  đạt  chuẩn  ngoại  ngữ  đăng  ký  số  TC  học  phần  ít  hơn  bình\nthường, cụ thể như sau:\n\na) Sinh viên thuộc các CTĐT chuẩn được đăng ký tối đa 14 TC và tối thiểu 8 TC\n\ncho một học kỳ chính;\n\nb)  Sinh  viên  thuộc  các  chương  trình  ELITECH  và  các  CTĐT  hợp  tác  quốc  tế",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24."
+          ],
+          "reference_contexts": [
+            "học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập"
+          ],
+          "response": "Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập [Document 1].",
+          "reference": "Khi số tín chỉ không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.",
+          "context_hit": true,
+          "retrieval_s": 0.2603,
+          "generation_s": 1.396
+        },
+        {
+          "id": "hp-01",
+          "category": "học phí",
+          "user_input": "Sinh viên rút học phần trong 7 tuần đầu thì phải đóng bao nhiêu phần trăm học phí?",
+          "retrieved_contexts": [
+            "3. Sinh viên, học viên có đơn đề nghị rút học phần trong khoảng thời gian 7 tuần\n(hoặc 3 tuần với các học phần tổ chức theo giảng dạy đợt A hoặc B) kể từ khi hết thời\nhạn điều chỉnh đăng ký lớp của học kỳ, nếu được giải quyết theo nguyện vọng thì chỉ\nđóng một nửa (50%) học phí của học phần đó. Quy định này không áp dụng với các\nhọc phần học ở kỳ hè.",
+            "nửa (50%) học phí của học phần đó. Trường hợp ngoại lệ là khi đề nghị rút học phần trong\ntuần đầu tiên của học kỳ thứ 2, nếu được giải quyết theo nguyện vọng thì không phải đóng\nhọc phí của học phần đó. Quy định tại khoản này không áp dụng với các học phần học ở\nhọc kỳ hè.\n4. Người học thuộc CTĐT cử nhân, kỹ sư có đơn đề nghị thôi học, nghỉ học tạm thời\nhoặc chuyển cơ sở đào tạo trong khoảng thời gian 7 tuần đầu của học kỳ, nếu được giải",
+            "4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ\nsở đào tạo trong khoảng thời gian 7 tuần kể từ khi hết thời hạn điều chỉnh đăng ký lớp\ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nửa (50%) học phí của\nhọc kỳ đó. Quy định này không áp dụng với kỳ hè.\n\n5. NCS đóng mức học phí theo năm học kể cả năm được gia hạn, trong đó đã bao\ngồm học phí của các học phần trong CTĐT tiến sĩ, không bao gồm các học phần bổ\nsung.\n\nCHƯƠNG II\n\nĐÀO TẠO ĐẠI HỌC",
+            "2. Thời hạn được rút học phần chậm nhất là 6 tuần sau khi bắt đầu học kỳ chính và\n2 tuần sau khi bắt đầu học kỳ hè. Sau thời hạn trên học phần vẫn được giữ trong phiếu\nđăng ký học, nếu sinh viên không đi học sẽ được xem như tự ý bỏ học và phải nhận\nđiểm F cho học phần đó.\n3. Những sinh viên có lý do đặc biệt như bị ốm hoặc tai nạn phải nghỉ học nhiều\nngày có thể nộp đơn xin rút học phần có xác nhận của Trưởng khoa/Viện trưởng và",
+            "quyết theo nguyện vọng thì phải đóng một nửa (50%) học phí của học kỳ đó. Quy định này\nkhông áp dụng với kỳ hè.\n5. Học phí của lớp học phần rút gọn được tính ở mức 50% so với lớp học phần bình\nthường.\n6. Học phí đối với NCS được tính theo năm học, trong đó đã bao gồm học phí của\ncác học phần tiến sĩ (không bao gồm các học phần bổ sung)."
+          ],
+          "reference_contexts": [
+            "chỉ\nđóng một nửa (50%) học phí của học phần đó"
+          ],
+          "response": "Sinh viên rút học phần trong 7 tuần đầu thì phải đóng 50% học phí của học phần đó, trừ trường hợp đề nghị rút học phần trong tuần đầu tiên của học kỳ thứ 2 thì không phải đóng học phí [Document 2].",
+          "reference": "Chỉ phải đóng một nửa (50%) học phí của học phần đó nếu đơn được giải quyết theo nguyện vọng. Quy định này không áp dụng với học phần học ở kỳ hè.",
+          "context_hit": true,
+          "retrieval_s": 0.1728,
+          "generation_s": 1.456
+        },
+        {
+          "id": "hp-02",
+          "category": "học phí",
+          "user_input": "Học phí năm học 2025-2026 được tính dựa trên cơ sở nào?",
+          "retrieved_contexts": [
+            "### Thông báo về mức học phí đối với các chương trình đào tạo năm học 2024-2025\n**THÔNG BÁO**\n**Về mức học phí đối với các chương trình đào tạo năm học 2024-2025**\n\nBan Đào tạo thông báo về mức học phí năm học 2024-2025 áp dụng đối với các chương trình đào tạo như sau:\n\n  1. **Quy định về mức học phí đối với các loại chương trình đào tạo:**",
+            "Căn cứ Tờ trình số 105/TTr-ĐT của Ban Đào tạo ngày 10 tháng 09 năm 2025 về mức\nhọc phí các chương trình đào tạo đại học chính quy, đào tạo kỹ sư chuyên sâu, vừa làm vừa\nhọc và sau đại học đối với năm học 2025-2026;\n\nTheo đề nghị của ông Trưởng Ban Đào tạo.\n\nQUYẾT ĐỊNH:\n\nĐiều 1. Phê duyệt mức học phí các chương trình đào tạo đại học chính quy, đào tạo kỹ sư\nchuyên sâu, vừa làm vừa học và sau đại học đối với năm học 2025-2026 tại Phụ lục I kèm theo.",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo chuẩn xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-CT%20Chuan-2024-2025.pdf) **(_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo hình thức Vừa làm vừa học xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-VLVH-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo Elitech xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-Elitech-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_)."
+          ],
+          "reference_contexts": [
+            "Học phí được tính theo số tín chỉ học phí (TCHP) của các học phần được sinh viên đăng"
+          ],
+          "response": "Học phí năm học 2025-2026 được tính dựa trên Tờ trình số 105/TTr-ĐT của Ban Đào tạo ngày 10 tháng 09 năm 2025 về mức học phí các chương trình đào tạo đại học chính quy, đào tạo kỹ sư chuyên sâu, vừa làm vừa học và sau đại học [Document 2].",
+          "reference": "Học phí được tính theo số tín chỉ học phí (TCHP) của các học phần mà sinh viên đăng ký học ở mỗi học kỳ.",
+          "context_hit": false,
+          "retrieval_s": 0.1502,
+          "generation_s": 1.674
+        },
+        {
+          "id": "hp-03",
+          "category": "học phí",
+          "user_input": "Mức học phí trong thông báo năm học 2024-2025 được tính theo đơn vị nào?",
+          "retrieved_contexts": [
+            "### Thông báo về mức học phí đối với các chương trình đào tạo năm học 2024-2025\n**THÔNG BÁO**\n**Về mức học phí đối với các chương trình đào tạo năm học 2024-2025**\n\nBan Đào tạo thông báo về mức học phí năm học 2024-2025 áp dụng đối với các chương trình đào tạo như sau:\n\n  1. **Quy định về mức học phí đối với các loại chương trình đào tạo:**",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo chuẩn xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-CT%20Chuan-2024-2025.pdf) **(_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo hình thức Vừa làm vừa học xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-VLVH-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo Elitech xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-Elitech-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "**Tải bản đầy đủ của Quy định về mức học phí năm học 2024-2025[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/2024_2_%20Q%C4%90%20h%E1%BB%8Dc%20ph%C3%AD%20-%202024-2025.pdf).**\n**BAN ĐÀO TẠO**"
+          ],
+          "reference_contexts": [
+            "đơn vị tính: nghìn đồng/01 tín chỉ học phí"
+          ],
+          "response": "Mức học phí trong thông báo năm học 2024-2025 được tính theo đơn vị nghìn đồng/01 tín chỉ học phí [Document 1].",
+          "reference": "Đơn vị tính là nghìn đồng trên 01 tín chỉ học phí.",
+          "context_hit": true,
+          "retrieval_s": 0.1656,
+          "generation_s": 1.107
+        },
+        {
+          "id": "dk-01",
+          "category": "đăng ký học phần",
+          "user_input": "Sau thời gian điều chỉnh đăng ký, sinh viên hủy đăng ký học phần có phải đóng học phí không?",
+          "retrieved_contexts": [
+            "b)  Sinh  viên  bị  cảnh  báo  học  tập  hoặc  chưa  đạt  chuẩn  ngoại  ngữ  theo  trình  độ\nnăm học bị giới hạn khối lượng đăng ký học tập theo quy định tại khoản 2 Điều 19 của\nQuy chế này.\n\n3. Sau thời gian điều chỉnh đăng ký, sinh  viên có thể  đề nghị hủy  đăng ký học\nphần để không tính kết quả học tập nhưng vẫn phải đóng học phí cho học phần đó theo\nquy định tại khoản 3 Điều 9 của Quy chế này. Thời hạn được phép hủy đăng ký học\nphần là trước 1/2 thời gian học của học phần đó.",
+            "học phần, nếu điều kiện tổ chức lớp học cho phép và sinh viên không vi phạm giới hạn\nkhối lượng quy định. Sinh viên không phải trả học phí cho những học phần đã được\nchấp nhận bỏ bớt. Riêng học kỳ hè chỉ không có đợt điều chỉnh đăng ký và sinh viên\nphải hoàn thành học phí theo khối lượng đăng ký trước khi bắt đầu học kỳ theo thời\ngian quy định để có tên trong danh sách lớp học.\n5. Trường có quy định cụ thể về các hình thức đăng k ý để phù hợp với từng điều",
+            "3. Sinh viên, học viên có đơn đề nghị rút học phần trong khoảng thời gian 7 tuần\n(hoặc 3 tuần với các học phần tổ chức theo giảng dạy đợt A hoặc B) kể từ khi hết thời\nhạn điều chỉnh đăng ký lớp của học kỳ, nếu được giải quyết theo nguyện vọng thì chỉ\nđóng một nửa (50%) học phí của học phần đó. Quy định này không áp dụng với các\nhọc phần học ở kỳ hè.",
+            "Điều 13. Rút học phần\n1. Sau thời gian đăng ký điều chỉnh, nếu sinh viên theo học thấy không thể hoàn\nthành tốt khối lượng học tập đã đăng k ý thì có thể làm đơn xin rút học phần để không\nđánh giá kết quả học phần đó, với điều kiện không vi phạm giới hạn tối thiểu quy định\ntrong khoản 3 của Điều 12. Học phần đã rút thì không tính điểm chính thức, nhưng vẫn\nphải tính học phí và được ghi chú (điểm W) trong hồ sơ học tập của sinh viên.",
+            "Đối với các học phần có nhiều lớp thành phần (lớp lý thuyết, bài tập, thực hành, thí\nnghiệm..), sinh viên phải đăng ký đủ các lớp thành phần theo yêu cầu.\nc) Điều chỉnh đăng ký: sinh viên có thể chuyển lớp, hủy lớp hoặc đăng ký lớp bổ\nsung, kể cả lớp với các học phần chưa đăng ký trước. Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ. Riêng việc đăng ký bổ sung vào các lớp\nhọc phần đã mở chỉ thực hiện trong tuần đầu của học kỳ. Học kỳ hè không có đợt điều"
+          ],
+          "reference_contexts": [
+            "vẫn phải đóng học phí cho học phần đó"
+          ],
+          "response": "Có, sinh viên vẫn phải đóng học phí cho học phần đó theo quy định. Thời hạn được phép hủy đăng ký học phần là trước 1/2 thời gian học của học phần đó [Document 1].",
+          "reference": "Có. Sinh viên vẫn phải đóng học phí cho học phần đó, và thời hạn được phép hủy đăng ký là trước 1/2 thời gian học của học phần.",
+          "context_hit": true,
+          "retrieval_s": 0.2532,
+          "generation_s": 1.224
+        },
+        {
+          "id": "dk-02",
+          "category": "đăng ký học phần",
+          "user_input": "Mỗi học kỳ chính có mấy đợt điều chỉnh đăng ký học phần?",
+          "retrieved_contexts": [
+            "Đối với các học phần có nhiều lớp thành phần (lớp lý thuyết, bài tập, thực hành, thí\nnghiệm..), sinh viên phải đăng ký đủ các lớp thành phần theo yêu cầu.\nc) Điều chỉnh đăng ký: sinh viên có thể chuyển lớp, hủy lớp hoặc đăng ký lớp bổ\nsung, kể cả lớp với các học phần chưa đăng ký trước. Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ. Riêng việc đăng ký bổ sung vào các lớp\nhọc phần đã mở chỉ thực hiện trong tuần đầu của học kỳ. Học kỳ hè không có đợt điều",
+            "8\n\nc) Điều chỉnh đăng ký: sinh viên có thể chuyển lớp, hủy lớp hoặc đăng ký lớp bổ\nsung, kể cả lớp với các học phần chưa đăng ký trước. Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ/đợt học. Riêng việc đăng ký bổ sung\nvào các lớp học phần đã mở chỉ thực hiện trong tuần đầu của học kỳ/đợt học. Học kỳ\nhè không có đợt điều chỉnh đăng ký.\n\n2. Số lượng TC đăng ký:",
+            "ký tối đa 14 tín chỉ nhưng tối thiểu 8 tín chỉ các học phần thuộc chương trình đào tạo.\n4. Quy trình đăng ký học tập cho mỗi học kỳ gồm 3 giai đoạn: đăng k ý học phần,\nđăng ký lớp chính thức và điều chỉnh đăng ký. Thời gian bắt đầu và kết thúc các đợt\nđăng ký được quy định cụ thể trong lịch năm học, phụ thuộc theo thời gian bắt đầu học\nkỳ. Trong đợt điều chỉnh đăng ký, sinh viên có thể đăng ký bổ sung hoặc bỏ bớt một số",
+            "1. Đăng ký học phần: Học viên thực hiện quy trình đăng ký học phần từ tài khoản\nhọc tập cá  nhân  theo  kế hoạch học tập chuẩn hoặc theo kế  hoạch  cá nhân. Học viên\nđược đào tạo theo hình thức chính quy có thể đăng ký tối đa 24 TC trong một học kỳ\nchính nhưng không vượt quá 45 TC trong một năm học. Học viên được đào tạo theo\nhình thức vừa làm vừa học có thể đăng ký tối đa 20 TC trong một học kỳ chính nhưng\nkhông vượt quá 30 TC trong một năm học. Học kỳ cuối khóa không áp dụng ngưỡng",
+            "chỉnh đăng ký.\n2. Số lượng TC đăng ký:\na) Sinh viên không thuộc diện cảnh báo học tập theo quy định tại khoản 1 Điều 19\ncủa Quy chế này được đăng ký tối đa 24 TC và tối thiểu 12 TC trong học kỳ chính, không\náp dụng ngưỡng TC đăng ký tối thiểu với sinh viên trình độ năm cuối. Sinh viên được đăng\nký tối đa 8 TC trong học kỳ hè.\nb) Sinh viên đang bị cảnh báo học tập bị giới hạn khối lượng đăng ký học tập theo\nquy định tại khoản 2 Điều 19 của Quy chế này."
+          ],
+          "reference_contexts": [
+            "Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký"
+          ],
+          "response": "Mỗi học kỳ chính có hai đợt điều chỉnh đăng ký học phần [Document 1].",
+          "reference": "Hai đợt điều chỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ. Đăng ký bổ sung vào lớp học phần đã mở chỉ thực hiện trong tuần đầu của học kỳ; học kỳ hè không có đợt điều chỉnh.",
+          "context_hit": true,
+          "retrieval_s": 0.1075,
+          "generation_s": 1.01
+        },
+        {
+          "id": "tn-01",
+          "category": "tốt nghiệp",
+          "user_input": "Điều kiện để sinh viên được xét công nhận tốt nghiệp là gì?",
+          "retrieved_contexts": [
+            "bảo vệ luận văn lần thứ hai; kinh phí thực hiện và bảo vệ luận văn theo đề tài mới.\n\nĐiều 33. Điều kiện tốt nghiệp thạc sĩ và xếp hạng tốt nghiệp\n\n1. Học viên có đủ các điều kiện sau đây thì được xét công nhận tốt nghiệp:\n\na) Luận văn đạt yêu cầu.",
+            "11\n\ntrường  hợp  ngoại  lệ  sẽ  do  Hội  đồng  xét  tốt  nghiệp  quyết  định  và  trình  Giám  đốc\nĐHBK Hà Nội phê duyệt.\n\n3. Sinh viên có đủ các điều kiện sau đây thì được xét công nhận tốt nghiệp:\n\na) Đã hoàn thành đầy  đủ các học phần theo  yêu cầu của  CTĐT trong thời gian\nquy định, bao gồm cả các học phần thuộc chương trình môn học Giáo dục thể chất và\nGiáo dục quốc phòng-an ninh.\n\nb) Đạt chuẩn ngoại ngữ đầu ra.",
+            "3. Học viên có đủ các điều kiện sau đây thì được xét công nhận tốt nghiệp:\n\na) Đã hoàn thành đầy  đủ các học phần theo  yêu cầu của  CTĐT trong thời gian\n\nquy định.\n\nb) Đã nộp đồ án tốt nghiệp cho thư viện theo quy cách của bản đồ án do ĐHBK\n\nHà Nội quy định.\n\nc) Đạt chuẩn ngoại ngữ đầu ra.\n\nd) Điểm trung bình tích lũy toàn khóa đạt từ 2,0 trở lên.\n\nđ)  Không  nằm  trong  danh  sách  đang  bị  kỷ  luật  hoặc  bị  Hội  đồng  kỷ  luật  của",
+            "ĐTĐH. Việc đăng ký xét tốt nghiệp có thể thực hiện trong mỗi học kỳ chính, thời hạn\nnộp đơn được quy định cụ thể trong lịch năm học.\n2. Những sinh viên có đủ các điều kiện sau đây thì được xét tốt nghiệp:\n▪ Đã nộp đơn đăng ký xét tốt nghiệp theo mẫu của Trường đúng hạn\n▪ Không bị nằm trong danh sách xét buộc thôi học\n▪ Cho đến thời điểm xét tốt nghiệp không bị truy cứu trách nhiệm hình sự\n18",
+            "khoa/Viện trưởng là ủy viên. Sau mỗi học kỳ chính, Hội đồng xét tốt nghiệp họp một\nlần và lập ra danh sách những người đủ điều kiện tốt nghiệp.\n4. Căn cứ đề nghị của Hội đồng xét tốt nghiệp, Hiệu trưởng ký quyết định công\nnhận tốt nghiệp cho những sinh viên đủ điều kiện tốt nghiệp.\n5. Sinh viên không được Hội đồng đánh giá đủ điều kiện tốt nghiệp vì chưa hoàn\nthành chương trình đào tạo sẽ phải chủ động nộp lại đơn đăng ký xét tốt nghiệp ở một"
+          ],
+          "reference_contexts": [
+            "Điểm trung bình tích lũy toàn khóa đạt từ 2,0 trở lên"
+          ],
+          "response": "Điều kiện để sinh viên được xét công nhận tốt nghiệp bao gồm:\n\n1. Đã hoàn thành đầy đủ các học phần theo yêu cầu của chương trình đào tạo trong thời gian quy định.\n2. Đã nộp đồ án tốt nghiệp cho thư viện theo quy cách quy định.\n3. Đạt chuẩn ngoại ngữ đầu ra.\n4. Điểm trung bình tích lũy toàn khóa đạt từ 2,0 trở lên.\n5. Không nằm trong danh sách đang bị kỷ luật hoặc bị Hội đồng kỷ luật [Document 3].",
+          "reference": "Sinh viên phải hoàn thành đầy đủ các học phần theo chương trình đào tạo trong thời gian quy định, nộp đồ án tốt nghiệp cho thư viện đúng quy cách, đạt chuẩn ngoại ngữ đầu ra, có điểm trung bình tích lũy toàn khóa từ 2,0 trở lên và không đang bị kỷ luật.",
+          "context_hit": true,
+          "retrieval_s": 0.0541,
+          "generation_s": 1.91
+        },
+        {
+          "id": "dv-01",
+          "category": "dịch vụ",
+          "user_input": "Sinh viên đi vào cổng Parabol thì gửi xe ở đâu?",
+          "retrieved_contexts": [
+            "**Hướng dẫn di chuyển và gửi xe**\n🔹 Cổng Parabol: Sinh viên có thể gửi xe tại các nhà xe D4-D6-D8.\n🔹 Cổng đường Đại Cồ Việt: Sinh viên có thể gửi xe tại nhà xe C4.\n🔹 Cổng Trần Đại Nghĩa: Sinh viên có thể gửi xe tại nhà xe C7 và D3.\n\n👉 Lưu ý: Đối với sinh viên gửi xe tại nhà xe C7, khi ra về, sinh viên nên di chuyển theo hướng cổng Đại Cồ Việt hoặc cổng Parabol để thuận tiện hơn.",
+            "![1788851602848 779202664400021421 6264649848061270925 b64b3d590008f2b31f7ebd4aa92dd8ce](https://hust.edu.vn/uploads/sys/sinh-vien/2026_09/1788851602848_779202664400021421_6264649848061270925_b64b3d590008f2b31f7ebd4aa92dd8ce.jpg)\n\n📍 Sinh viên vui lòng quan sát biển chỉ dẫn và thực hiện theo hướng dẫn của lực lượng bảo vệ, điều phối tại các khu vực cổng trường.\n\nK71 chủ động lựa chọn lộ trình – di chuyển thuận tiện – đến trường an toàn!",
+            "3. Sinh viên được phép thực hiện đồ án/khóa luận tốt nghiệp tại một cơ sở trong\nnước (cơ sở giáo dục đại học, viện nghiên cứu, doanh nghiệp,…) hoặc tại một cơ sở\nđào tạo ở nước ngoài theo chương trình trao đổi sinh viên đã được ký kết nhưng phải\nbảo  vệ  tại  ĐHBK  Hà  Nội  để  được  đánh  giá  và  cho  điểm.  Với  sinh  viên  thuộc  các\n\n\f9\n\nCTĐT theo hình thức VLVH tại đơn vị liên kết, việc đánh giá ĐATN được phép thực\nhiện tại đơn vị liên kết hoặc tại ĐHBK Hà Nội.",
+            "Danh sách sinh viên được học bổng xem [**TẠI ĐÂY**](https://bom.so/WDzQ7o)\nNhà trường sẽ làm thủ tục chuyển tiền học bổng qua tài khoản ViettelPay vào cuối tháng 11/2024. **_Những sinh viên CHƯA ĐĂNG KÝ TÀI KHOẢN để nhận học bổng hoặc sinh viên CÓ Ý KIẾN THẮC MẮC về việc xét cấp học bổng đăng ký tài khoản và gửi câu hỏi tại đường link sau trước 8h00 Thứ 2 ngày_** **_04_**** _/11/2024_** [**TẠI ĐÂY**](https://forms.office.com/r/6bVK6a9a7F)",
+            "trong nước (cơ sở giáo dục đại học, viện nghiên cứu, doanh nghiệp,…) hoặc tại một cơ sở\nđào tạo ở nước ngoài theo chương trình trao đổi sinh viên đã được ký kết nhưng phải bảo\nvệ tại ĐHBK Hà Nội để được đánh giá và cho điểm. Với sinh viên thuộc các CTĐT theo\nhình thức VLVH tại đơn vị liên kết, việc đánh giá đồ án tốt nghiệp/khóa luận tốt nghiệp\nđược phép thực hiện tại đơn vị liên kết hoặc tại ĐHBK Hà Nội.\n4. Khối lượng tối đa được công nhận, chuyển đổi không vượt quá 50% khối lượng"
+          ],
+          "reference_contexts": [
+            "Cổng Parabol: Sinh viên có thể gửi xe tại các nhà xe D4-D6-D8"
+          ],
+          "response": "Sinh viên đi vào cổng Parabol thì có thể gửi xe tại các nhà xe D4-D6-D8 [Document 1].",
+          "reference": "Sinh viên có thể gửi xe tại các nhà xe D4, D6 và D8.",
+          "context_hit": true,
+          "retrieval_s": 0.1477,
+          "generation_s": 1.017
+        },
+        {
+          "id": "dv-02",
+          "category": "dịch vụ",
+          "user_input": "Sinh viên vào cổng Trần Đại Nghĩa gửi xe ở nhà xe nào?",
+          "retrieved_contexts": [
+            "**Hướng dẫn di chuyển và gửi xe**\n🔹 Cổng Parabol: Sinh viên có thể gửi xe tại các nhà xe D4-D6-D8.\n🔹 Cổng đường Đại Cồ Việt: Sinh viên có thể gửi xe tại nhà xe C4.\n🔹 Cổng Trần Đại Nghĩa: Sinh viên có thể gửi xe tại nhà xe C7 và D3.\n\n👉 Lưu ý: Đối với sinh viên gửi xe tại nhà xe C7, khi ra về, sinh viên nên di chuyển theo hướng cổng Đại Cồ Việt hoặc cổng Parabol để thuận tiện hơn.",
+            "![1788851602848 779202664400021421 6264649848061270925 b64b3d590008f2b31f7ebd4aa92dd8ce](https://hust.edu.vn/uploads/sys/sinh-vien/2026_09/1788851602848_779202664400021421_6264649848061270925_b64b3d590008f2b31f7ebd4aa92dd8ce.jpg)\n\n📍 Sinh viên vui lòng quan sát biển chỉ dẫn và thực hiện theo hướng dẫn của lực lượng bảo vệ, điều phối tại các khu vực cổng trường.\n\nK71 chủ động lựa chọn lộ trình – di chuyển thuận tiện – đến trường an toàn!",
+            "_Kế hoạch, hồ sơ đăng ký xét cấp HB Trần Đại Nghĩa học kỳ 2 năm học 2023-2024 sinh viên xem**[TẠI ĐÂY](https://ctt.hust.edu.vn/DisplayWeb/DisplayBaiViet?baiviet=43409)** vào đầu tháng 2/2024_.",
+            "**Học bổng Trần Đại Nghĩa**\n\nHọc bổng Trần Đại Nghĩa là Học bổng của Đại học Bách khoa Hà Nội xét cấp cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo hoặc hộ có hoàn cảnh kinh tế đặc biệt khó khăn khác, sinh viên gặp tai nạn, rủi ro đột xuất) có kết quả học tập và rèn luyện tốt.\n\nHọc bổng Trần Đại Nghĩa xét theo học kỳ và có 2 mức tương ứng với 50% và 100% học phí.",
+            "3. Sinh viên được phép thực hiện đồ án/khóa luận tốt nghiệp tại một cơ sở trong\nnước (cơ sở giáo dục đại học, viện nghiên cứu, doanh nghiệp,…) hoặc tại một cơ sở\nđào tạo ở nước ngoài theo chương trình trao đổi sinh viên đã được ký kết nhưng phải\nbảo  vệ  tại  ĐHBK  Hà  Nội  để  được  đánh  giá  và  cho  điểm.  Với  sinh  viên  thuộc  các\n\n\f9\n\nCTĐT theo hình thức VLVH tại đơn vị liên kết, việc đánh giá ĐATN được phép thực\nhiện tại đơn vị liên kết hoặc tại ĐHBK Hà Nội."
+          ],
+          "reference_contexts": [
+            "Cổng Trần Đại Nghĩa: Sinh viên có thể gửi xe tại nhà xe C7 và D3"
+          ],
+          "response": "Sinh viên vào cổng Trần Đại Nghĩa có thể gửi xe tại nhà xe C7 và D3 [Document 1].",
+          "reference": "Nhà xe C7 và D3. Sinh viên gửi xe tại C7 khi ra về nên đi theo hướng cổng Đại Cồ Việt hoặc cổng Parabol cho thuận tiện.",
+          "context_hit": true,
+          "retrieval_s": 0.0622,
+          "generation_s": 1.083
+        },
+        {
+          "id": "dv-03",
+          "category": "dịch vụ",
+          "user_input": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức ở đâu và vào những ngày nào?",
+          "retrieved_contexts": [
+            "**KẾ HOẠCH****LỄ TỐT NGHIỆP ĐỢT THÁNG 9.2026 TẠI HỘI TRƯỜNG C2**\n\n**1. Sáng thứ 7 ngày 26/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 7h15-7h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n  * Sinh viên vào Hội trường ổn định chỗ ngồi theo đúng khu vực do Ban tổ chức sắp xếp\n\n |\n| 7h45-8h00  |\n  * Văn nghệ chào mừng",
+            "|\n| + Trường CNTT&TT  |\n| + Trường Vật liệu  |\n| + Khoa Vật lý kỹ thuật  |\n**2. Chiều Chủ nhật ngày 27/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 13h15-13h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n\n |\n| 13h45-14h00  |\n  * Văn nghệ chào mừng\n\n |\n| 14h00-17h30  |\n  * Chương trình Lễ tốt nghiệp bắt đầu.\n  * Trao bằng tốt nghiệp cho sinh viên các Trường/Khoa theo thứ tự như sau:",
+            "|\n\n**2. Chiều thứ 7 ngày 26/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 13h15-13h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n\n |\n| 13h45-14h00  |\n  * Văn nghệ chào mừng\n\n |\n| 14h00-17h30  |\n  * Chương trình Lễ tốt nghiệp bắt đầu.\n  * Trao bằng tốt nghiệp cho sinh viên các Trường/Khoa theo thứ tự như sau:\n\n |\n| + Trường Cơ khí  |\n| + Trường Kinh tế  |\n| + Khoa Toán - Tin  |",
+            "**2. Sáng Chủ nhật ngày 27/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 7h15-7h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n\n |\n| 7h45-8h00  |\n  * Văn nghệ chào mừng\n\n |\n| 8h00-11h30  |\n  * Chương trình Lễ tốt nghiệp bắt đầu.\n  * Trao bằng tốt nghiệp cho sinh viên các Trường/Khoa theo thứ tự như sau:",
+            "|\n| 7h45-8h00  |\n  * Văn nghệ chào mừng\n\n |\n| 8h00-11h30  |\n  * Chương trình Lễ tốt nghiệp chính thức bắt đầu\n  * Trao bằng tốt nghiệp cho **sinh viên** **được khen thưởng** **tốt** **nghiệp xuất sắc toàn Đại học** _(SV xếp hạng tốt nghiệp xuất sắc, có điểm RL trung bình tốt nghiệp xếp loại xuất sắc và có thời gian học tập không vượt quá thời gian thiết kế CTĐT chuẩn)_**** và sinh viên Trường Hóa và Khoa học sự sống.\n\n |"
+          ],
+          "reference_contexts": [
+            "LỄ TỐT NGHIỆP ĐỢT THÁNG 9.2026 TẠI HỘI TRƯỜNG C2"
+          ],
+          "response": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức tại Hội trường C2 vào các ngày thứ 7 và Chủ nhật, cụ thể là ngày 26 và 27 tháng 9 năm 2026 [Document 1].",
+          "reference": "Lễ tốt nghiệp được tổ chức tại Hội trường C2, vào sáng thứ Bảy ngày 26/9/2026 và sáng Chủ nhật ngày 27/9/2026.",
+          "context_hit": true,
+          "retrieval_s": 0.1678,
+          "generation_s": 1.596
+        }
+      ],
+      "ragas": {
+        "faithfulness": 0.8703703703703703,
+        "answer_relevancy": 0.5393442966318999,
+        "context_recall": 0.8611111111111112,
+        "context_precision": 0.886419753045144,
+        "_per_case": [
+          {
+            "user_input": "Học bổng khuyến khích học tập của Bách khoa Hà Nội có mấy mức?",
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.5110236033844581,
+            "context_recall": 0.0,
+            "context_precision": 0.9999999999
+          },
+          {
+            "user_input": "Điều kiện để được xét học bổng khuyến khích học tập loại xuất sắc là gì?",
+            "faithfulness": 0.5,
+            "answer_relevancy": 0.43047986238922215,
+            "context_recall": 1.0,
+            "context_precision": 0.94999999997625
+          },
+          {
+            "user_input": "Học bổng Trần Đại Nghĩa dành cho đối tượng nào và có mấy mức?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.6498904731734084,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999666667
+          },
+          {
+            "user_input": "Năm học 2023-2024 nhà trường dành bao nhiêu tiền cho quỹ học bổng khuyến khích học tập?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.5102305007680363,
+            "context_recall": 1.0,
+            "context_precision": 0.8666666666377778
+          },
+          {
+            "user_input": "Sinh viên có phải nộp đơn để được xét học bổng khuyến khích học tập không?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.43507109089845974,
+            "context_recall": 0.5,
+            "context_precision": 0.99999999998
+          },
+          {
+            "user_input": "Sinh viên bị nâng một mức cảnh báo học tập trong trường hợp nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.8107067963389655,
+            "context_recall": 1.0,
+            "context_precision": 0.5888888888692593
+          },
+          {
+            "user_input": "Khi nào sinh viên bị nâng hai mức cảnh báo học tập?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.3366352614476746,
+            "context_recall": 1.0,
+            "context_precision": 0.5888888888692593
+          },
+          {
+            "user_input": "Cảnh báo học tập mức 3 được áp dụng với sinh viên nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.47303919579579395,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999666667
+          },
+          {
+            "user_input": "Sinh viên đang bị cảnh báo học tập mức 1 hoặc mức 2 được hạ mức khi nào?",
+            "faithfulness": 0.6666666666666666,
+            "answer_relevancy": 0.3712714647034228,
+            "context_recall": 1.0,
+            "context_precision": 0.8874999999778125
+          },
+          {
+            "user_input": "Sinh viên rút học phần trong 7 tuần đầu thì phải đóng bao nhiêu phần trăm học phí?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.4441494765145731,
+            "context_recall": 1.0,
+            "context_precision": 0.94999999997625
+          },
+          {
+            "user_input": "Học phí năm học 2025-2026 được tính dựa trên cơ sở nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.5511502740196897,
+            "context_recall": 0.0,
+            "context_precision": 0.6388888888675925
+          },
+          {
+            "user_input": "Mức học phí trong thông báo năm học 2024-2025 được tính theo đơn vị nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.5379190908326574,
+            "context_recall": 1.0,
+            "context_precision": 0.99999999998
+          },
+          {
+            "user_input": "Sau thời gian điều chỉnh đăng ký, sinh viên hủy đăng ký học phần có phải đóng học phí không?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.6982595524887788,
+            "context_recall": 1.0,
+            "context_precision": 0.8055555555287036
+          },
+          {
+            "user_input": "Mỗi học kỳ chính có mấy đợt điều chỉnh đăng ký học phần?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.7188118233765168,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999666667
+          },
+          {
+            "user_input": "Điều kiện để sinh viên được xét công nhận tốt nghiệp là gì?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.4630112273358922,
+            "context_recall": 1.0,
+            "context_precision": 0.6791666666496875
+          },
+          {
+            "user_input": "Sinh viên đi vào cổng Parabol thì gửi xe ở đâu?",
+            "faithfulness": 0.5,
+            "answer_relevancy": 0.6125004002566273,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999
+          },
+          {
+            "user_input": "Sinh viên vào cổng Trần Đại Nghĩa gửi xe ở nhà xe nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.573223586942584,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999
+          },
+          {
+            "user_input": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức ở đâu và vào những ngày nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.5808236587074368,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999
+          }
+        ]
+      },
+      "median_retrieval_s": 0.0310516357421875
+    },
+    "B_hybrid_rrf": {
+      "label": "Config B — hybrid + RRF",
+      "context_hit_rate": 0.7777777777777778,
+      "mean_retrieval_s": 0.15986666666666668,
+      "mean_generation_s": 1.2788888888888887,
+      "rows": [
+        {
+          "id": "hb-01",
+          "category": "học bổng",
+          "user_input": "Học bổng khuyến khích học tập của Bách khoa Hà Nội có mấy mức?",
+          "retrieved_contexts": [
+            "**_> >> Chi tiết các học bổng tại Đại học Bách khoa Hà Nội xem [TẠI ĐÂY](https://ctsv.hust.edu.vn/#/so-tay-sv/61/hoc-bong)_**\n\n**Học bổng Khuyến khích học tập: Cứ bền bỉ, cơ hội sẽ đến**\n\nNăm học 2024 – 2025, Đại học Bách khoa Hà Nội dành khoảng 70 tỷ đồng cho quỹ học bổng Khuyến khích học tập (KKHT), xét cấp cho sinh viên có kết quả học tập và rèn luyện tốt. Với sinh viên năm Nhất, học bổng KKHT bắt đầu xét từ kỳ 2.\n\nHọc bổng được xét theo học kỳ, với 3 mức:",
+            "Học bổng dành cho sinh viên Đại học Bách khoa Hà Nội (cập nhật đến 6/2025)/ Scholarships for Students of Hanoi University of Science and Technology (updated to June 2025):\n\n1. **Học bổng Khuyến khích học tập** : Dành cho sinh viên có kết quả học tập và rèn luyện tốt/ **Academic Encouragement Scholarship:** For students with strong academic performance and good conduct.",
+            "**_Đại học Bách khoa Hà Nội có nhiều nguồn học bổng dành cho sinh viên. Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm Quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Với các bạn sinh viên có hoàn cảnh khó khăn, có rất nhiều cơ hội tiếp cận các nguồn học bổng có giá trị: Học bổng KKHT, học bổng Trần Đại Nghĩa (dành cho sinh viên có hoàn cảnh khó khăn), học bổng từ doanh nghiệp…_\n\nHọc bổng khuyến khích học tập (KKHT)**",
+            "xét khen thưởng. Điều kiện và hình thức xét khen thưởng được quy định cụ thể trong\nQuy định về công tác quản lý sinh viên của trường ĐHBK Hà Nội. Ngoài ra, những\nsinh viên xuất sắc nhất còn có cơ hội được nhận học bổng khuyến khích và học bổng\ntài trợ.\nĐiều 35. Học bổng\nHọc bổng gồm các loại: Học bổng khuyến khích học tập, học bổng chính sách và\nhọc bổng tài trợ của các tổ chức và cá nhân. Việc thực hiện chế độ học bổng khuyến",
+            "khích học tập và học bổng chính sách cho sinh viên căn cứ theo các thông tư liên tịch,\ncác quy định hiện hành của Bộ Giáo dục và Đào tạo. Việc xét học bổng tài trợ thực\nhiện theo những điều kiện và quy trình riêng. Trường Đại học Bách Khoa Hà Nội quy\nđịnh một số điểm bổ sung như sau:\na) Các loại học bổng chỉ được cấp trong thời gian thiết kế của khóa học. Thời gian\nnghỉ học tạm thời, thời gian kéo dài và thời gian học lấy bằng thứ hai không được xét\ncấp học bổng."
+          ],
+          "reference_contexts": [
+            "Học bổng KKHT được xét theo học kỳ và có 3 mức:"
+          ],
+          "response": "Học bổng khuyến khích học tập của Bách khoa Hà Nội có 3 mức [Document 1].",
+          "reference": "Học bổng khuyến khích học tập có 3 mức: loại C (khá) tương đương mức học phí sinh viên phải đóng, loại B (giỏi) bằng 1,2 lần loại C, và loại A (xuất sắc) bằng 1,5 lần loại C.",
+          "context_hit": false,
+          "retrieval_s": 0.6068,
+          "generation_s": 1.354
+        },
+        {
+          "id": "hb-02",
+          "category": "học bổng",
+          "user_input": "Điều kiện để được xét học bổng khuyến khích học tập loại xuất sắc là gì?",
+          "retrieved_contexts": [
+            "_Điều kiện được xét, cấp học bổng KKHT:_\n\n• Học bổng loại khá: Sinh viên có kết quả học tập và rèn luyện đạt từ loại khá trở lên.\n\n• Học bổng loại giỏi: Sinh viên có kết quả học tập và rèn luyện đạt từ loại giỏi trở lên.\n\n• Học bổng loại xuất sắc: Sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên.\n\nCăn cứ vào kết quả học tập và rèn luyện Nhà trường sẽ tổ chức xét cấp học bổng cho sinh viên (sinh viên không cần phải đăng ký).",
+            "Học bổng khuyến khích học tập (KKHT)**\n\nNăm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Học bổng KKHT được xét theo học kỳ và có 3 mức:\n\n• Học bổng loại khá (loại C): Tương đương với mức học phí sinh viên phải đóng;\n\n• Học bổng loại giỏi (loại B): Bằng 1,2 lần học bổng loại khá;\n\n• Học bổng loại xuất sắc (loại A): Bằng 1,5 lần học bổng loại khá.\n\n_Điều kiện được xét, cấp học bổng KKHT:_",
+            "### KẾT QUẢ XÉT CẤP HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP KỲ I NĂM HỌC 2024-2025\nNhà trường trân trọng thông báo và chúc mừng **1.056 sinh viên** có kết quả học tập và rèn luyện xuất sắc được học bổng khuyến khích học tập học kỳ I năm học 2024-2025.\n\nHọc bổng được xét theo khóa ngành, trong đó có:\n\n  * 729 sinh viên đạt học bổng loại xuất sắc (loại A)\n  * 237 sinh viên đạt học bổng loại giỏi (loại B)\n  * 90 sinh viên đạt học bổng loại khá (loại C)",
+            "xét khen thưởng. Điều kiện và hình thức xét khen thưởng được quy định cụ thể trong\nQuy định về công tác quản lý sinh viên của trường ĐHBK Hà Nội. Ngoài ra, những\nsinh viên xuất sắc nhất còn có cơ hội được nhận học bổng khuyến khích và học bổng\ntài trợ.\nĐiều 35. Học bổng\nHọc bổng gồm các loại: Học bổng khuyến khích học tập, học bổng chính sách và\nhọc bổng tài trợ của các tổ chức và cá nhân. Việc thực hiện chế độ học bổng khuyến",
+            "Học bổng được xét theo học kỳ, với 3 mức:\n\nLoại C (Khá): Tương đương học phí phải đóng;\n\nLoại B (Giỏi): Bằng 1,2 lần học bổng loại C;\n\nLoại A (Xuất sắc): Bằng 1,5 lần học bổng loại C.\n\nĐiều kiện xét cấp học bổng rất rõ ràng: Chỉ cần kết quả học tập và rèn luyện đạt từ khá, giỏi, xuất sắc trở lên. Sinh viên không cần nộp đơn đăng ký, học bổng sẽ được xét tự động.\n\nĐiều đó có nghĩa: Bạn chỉ cần kiên trì và nỗ lực, cánh cửa học bổng luôn rộng mở."
+          ],
+          "reference_contexts": [
+            "Học bổng loại xuất sắc: Sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên."
+          ],
+          "response": "Điều kiện để được xét học bổng khuyến khích học tập loại xuất sắc là sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên [Document 1].",
+          "reference": "Sinh viên phải có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên. Sinh viên không cần đăng ký, nhà trường tự tổ chức xét cấp.",
+          "context_hit": true,
+          "retrieval_s": 0.1444,
+          "generation_s": 1.195
+        },
+        {
+          "id": "hb-03",
+          "category": "học bổng",
+          "user_input": "Học bổng Trần Đại Nghĩa dành cho đối tượng nào và có mấy mức?",
+          "retrieved_contexts": [
+            "**Học bổng Trần Đại Nghĩa: Mỗi giấc mơ đều xứng đáng đi tiếp**\n\nĐược đặt theo tên vị Hiệu trưởng đầu tiên của Đại học Bách khoa Hà Nội, học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh đặc biệt khó khăn nhưng vẫn vững vàng trong học tập và rèn luyện.\n\nHọc bổng Trần Đại Nghĩa được xét theo học kỳ, với hai mức hỗ trợ: 50% hoặc 100% học phí.",
+            "**Học bổng Trần Đại Nghĩa**\n\nHọc bổng Trần Đại Nghĩa là Học bổng của Đại học Bách khoa Hà Nội xét cấp cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo hoặc hộ có hoàn cảnh kinh tế đặc biệt khó khăn khác, sinh viên gặp tai nạn, rủi ro đột xuất) có kết quả học tập và rèn luyện tốt.\n\nHọc bổng Trần Đại Nghĩa xét theo học kỳ và có 2 mức tương ứng với 50% và 100% học phí.",
+            "2. **Học bổng Trần Đại Nghĩa** : Dành cho sinh viên có hoàn cảnh khó khăn, có nghị lực vươn lên trong cuộc sống/ **Trần Đại Nghĩa Scholarship:** For students facing difficult circumstances who demonstrate strong determination and resilience.\n\n3. **Học bổng tài trợ** : Dành cho sinh viên có kết quả học tập tốt, sinh viên có hoàn cảnh khó khăn/ **Sponsored Scholarships:** For students with good academic results or those in disadvantaged situations.",
+            "Xem chi tiết Quy định về việc xét cấp Học bổng Trần Đại Nghĩa sinh viên **TẠI ĐÂY**.",
+            "**_Đại học Bách khoa Hà Nội có nhiều nguồn học bổng dành cho sinh viên. Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm Quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Với các bạn sinh viên có hoàn cảnh khó khăn, có rất nhiều cơ hội tiếp cận các nguồn học bổng có giá trị: Học bổng KKHT, học bổng Trần Đại Nghĩa (dành cho sinh viên có hoàn cảnh khó khăn), học bổng từ doanh nghiệp…_\n\nHọc bổng khuyến khích học tập (KKHT)**"
+          ],
+          "reference_contexts": [
+            "Học bổng Trần Đại Nghĩa xét theo học kỳ và có 2 mức tương ứng với 50% và 100% học phí."
+          ],
+          "response": "Học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn nhưng vẫn có kết quả học tập và rèn luyện tốt. Học bổng này có 2 mức hỗ trợ: 50% hoặc 100% học phí [Document 2].",
+          "reference": "Học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo, gặp tai nạn hoặc rủi ro đột xuất) nhưng có kết quả học tập và rèn luyện tốt. Học bổng xét theo học kỳ và có 2 mức tương ứng 50% và 100% học phí.",
+          "context_hit": true,
+          "retrieval_s": 0.1329,
+          "generation_s": 1.318
+        },
+        {
+          "id": "hb-04",
+          "category": "học bổng",
+          "user_input": "Năm học 2023-2024 nhà trường dành bao nhiêu tiền cho quỹ học bổng khuyến khích học tập?",
+          "retrieved_contexts": [
+            "Học bổng khuyến khích học tập (KKHT)**\n\nNăm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Học bổng KKHT được xét theo học kỳ và có 3 mức:\n\n• Học bổng loại khá (loại C): Tương đương với mức học phí sinh viên phải đóng;\n\n• Học bổng loại giỏi (loại B): Bằng 1,2 lần học bổng loại khá;\n\n• Học bổng loại xuất sắc (loại A): Bằng 1,5 lần học bổng loại khá.\n\n_Điều kiện được xét, cấp học bổng KKHT:_",
+            "**_Đại học Bách khoa Hà Nội có nhiều nguồn học bổng dành cho sinh viên. Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm Quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Với các bạn sinh viên có hoàn cảnh khó khăn, có rất nhiều cơ hội tiếp cận các nguồn học bổng có giá trị: Học bổng KKHT, học bổng Trần Đại Nghĩa (dành cho sinh viên có hoàn cảnh khó khăn), học bổng từ doanh nghiệp…_\n\nHọc bổng khuyến khích học tập (KKHT)**",
+            "### KẾT QUẢ XÉT CẤP HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP KỲ I NĂM HỌC 2024-2025\nNhà trường trân trọng thông báo và chúc mừng **1.056 sinh viên** có kết quả học tập và rèn luyện xuất sắc được học bổng khuyến khích học tập học kỳ I năm học 2024-2025.\n\nHọc bổng được xét theo khóa ngành, trong đó có:\n\n  * 729 sinh viên đạt học bổng loại xuất sắc (loại A)\n  * 237 sinh viên đạt học bổng loại giỏi (loại B)\n  * 90 sinh viên đạt học bổng loại khá (loại C)",
+            "**_> >> Chi tiết các học bổng tại Đại học Bách khoa Hà Nội xem [TẠI ĐÂY](https://ctsv.hust.edu.vn/#/so-tay-sv/61/hoc-bong)_**\n\n**Học bổng Khuyến khích học tập: Cứ bền bỉ, cơ hội sẽ đến**\n\nNăm học 2024 – 2025, Đại học Bách khoa Hà Nội dành khoảng 70 tỷ đồng cho quỹ học bổng Khuyến khích học tập (KKHT), xét cấp cho sinh viên có kết quả học tập và rèn luyện tốt. Với sinh viên năm Nhất, học bổng KKHT bắt đầu xét từ kỳ 2.\n\nHọc bổng được xét theo học kỳ, với 3 mức:",
+            "Từ năm 2024, Đại học Bách khoa Hà Nội bắt đầu triển khai chương trình cấp học bổng cho sinh viên sang học tập, thực tập ngắn hạn tại các trường đối tác nước ngoài. Kinh phí học bổng dành cho năm 2024 là 5 tỷ đồng"
+          ],
+          "reference_contexts": [
+            "Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT"
+          ],
+          "response": "Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng cho quỹ học bổng khuyến khích học tập (KKHT) [Document 1].",
+          "reference": "Khoảng 70 tỷ đồng.",
+          "context_hit": true,
+          "retrieval_s": 0.1614,
+          "generation_s": 1.06
+        },
+        {
+          "id": "hb-05",
+          "category": "học bổng",
+          "user_input": "Sinh viên có phải nộp đơn để được xét học bổng khuyến khích học tập không?",
+          "retrieved_contexts": [
+            "### KẾT QUẢ XÉT CẤP HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP KỲ I NĂM HỌC 2024-2025\nNhà trường trân trọng thông báo và chúc mừng **1.056 sinh viên** có kết quả học tập và rèn luyện xuất sắc được học bổng khuyến khích học tập học kỳ I năm học 2024-2025.\n\nHọc bổng được xét theo khóa ngành, trong đó có:\n\n  * 729 sinh viên đạt học bổng loại xuất sắc (loại A)\n  * 237 sinh viên đạt học bổng loại giỏi (loại B)\n  * 90 sinh viên đạt học bổng loại khá (loại C)",
+            "xét khen thưởng. Điều kiện và hình thức xét khen thưởng được quy định cụ thể trong\nQuy định về công tác quản lý sinh viên của trường ĐHBK Hà Nội. Ngoài ra, những\nsinh viên xuất sắc nhất còn có cơ hội được nhận học bổng khuyến khích và học bổng\ntài trợ.\nĐiều 35. Học bổng\nHọc bổng gồm các loại: Học bổng khuyến khích học tập, học bổng chính sách và\nhọc bổng tài trợ của các tổ chức và cá nhân. Việc thực hiện chế độ học bổng khuyến",
+            "cấp học bổng.\nb) Học bổng chính sách được cấp theo quyết định của Hiệu trưởng Nhà trường trên\ncơ sở hồ sơ của sinh viên được xét công nhận là đầy đủ và chính xác. Các trường hợp\ntrễ hạn sẽ không được truy lĩnh. Ngoài thời gian chính thức của khóa học, học bổng\nchính sách chỉ được cấp nếu trường nhận được chỉ tiêu học bổng bổ sung từ cấp trên.\nc) Điều kiện cần để xét học bổng khuyến khích: sinh viên đăng ký học, dự thi và",
+            "Học bổng khuyến khích học tập (KKHT)**\n\nNăm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Học bổng KKHT được xét theo học kỳ và có 3 mức:\n\n• Học bổng loại khá (loại C): Tương đương với mức học phí sinh viên phải đóng;\n\n• Học bổng loại giỏi (loại B): Bằng 1,2 lần học bổng loại khá;\n\n• Học bổng loại xuất sắc (loại A): Bằng 1,5 lần học bổng loại khá.\n\n_Điều kiện được xét, cấp học bổng KKHT:_",
+            "Học bổng được xét theo học kỳ, với 3 mức:\n\nLoại C (Khá): Tương đương học phí phải đóng;\n\nLoại B (Giỏi): Bằng 1,2 lần học bổng loại C;\n\nLoại A (Xuất sắc): Bằng 1,5 lần học bổng loại C.\n\nĐiều kiện xét cấp học bổng rất rõ ràng: Chỉ cần kết quả học tập và rèn luyện đạt từ khá, giỏi, xuất sắc trở lên. Sinh viên không cần nộp đơn đăng ký, học bổng sẽ được xét tự động.\n\nĐiều đó có nghĩa: Bạn chỉ cần kiên trì và nỗ lực, cánh cửa học bổng luôn rộng mở."
+          ],
+          "reference_contexts": [
+            "sinh viên không cần phải đăng ký"
+          ],
+          "response": "Sinh viên không cần nộp đơn đăng ký, học bổng sẽ được xét tự động nếu có kết quả học tập và rèn luyện đạt từ khá, giỏi, xuất sắc trở lên [Document 5].",
+          "reference": "Không. Nhà trường căn cứ kết quả học tập và rèn luyện để tổ chức xét cấp, sinh viên không cần phải đăng ký.",
+          "context_hit": false,
+          "retrieval_s": 0.1142,
+          "generation_s": 1.171
+        },
+        {
+          "id": "cb-01",
+          "category": "cảnh báo học tập",
+          "user_input": "Sinh viên bị nâng một mức cảnh báo học tập trong trường hợp nào?",
+          "retrieved_contexts": [
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24.",
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "các năm tiếp theo.\nb) Sinh viên bị nâng 2 mức cảnh cáo học tập khi điểm trung bình học kỳ bằng 0\nhoặc không đăng ký học tập, tự ý bỏ học không có lý do.\nc) Sinh viên bị cảnh cáo học tập mức 3 sẽ bị xử lý buộc thôi học như quy định trong\nĐiều 26.\nd) Sinh viên đã bị cảnh cáo học tập ở mức 1 hoặc 2, nếu trong lần xử lý học tập tiếp\ntheo không phạm vào các điều kiện nêu trong mục a hoặc b trên đây thì mức cảnh cáo\nsẽ được hạ xuống một mức.\nĐiều 28. Cảnh cáo kỷ luật",
+            "15\ntập này không phụ thuộc vào điều kiện nâng mức cảnh báo học tập tại mục a và mục b\nkhoản này.\ne) Không xét cảnh báo học tập với học kỳ hè.\n2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh báo\nhọc tập từ mức 2 trở lên đăng ký số TC học phần ít hơn bình thường tại học kỳ 1 của năm\nhọc, cụ thể như sau:\na) Sinh viên thuộc các CTĐT chuẩn được đăng ký tối đa 14 TC và tối thiểu 8 TC cho\nmột học kỳ chính;"
+          ],
+          "reference_contexts": [
+            "Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học"
+          ],
+          "response": "Sinh viên bị nâng một mức cảnh báo học tập khi có số tín chỉ (TC) không đạt trong học kỳ lớn hơn 8 [Document 2].",
+          "reference": "Khi số tín chỉ không đạt trong học kỳ lớn hơn 8.",
+          "context_hit": true,
+          "retrieval_s": 0.1479,
+          "generation_s": 1.046
+        },
+        {
+          "id": "cb-02",
+          "category": "cảnh báo học tập",
+          "user_input": "Khi nào sinh viên bị nâng hai mức cảnh báo học tập?",
+          "retrieved_contexts": [
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24.",
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "quy định như sau:\na) Sinh viên bị nâng một mức cảnh cáo học tập khi phạm vào một trong các điều\nkiện sau:\n- Điểm trung bình học kỳ đạt dưới 0,6 đối với học kỳ đầu tiên, 0,8 đối với học kỳ\nthứ hai và dưới 1,0 đối với các học kỳ tiếp theo của khóa học.\n- Điểm trung bình tích lũy đạt dưới 1,0 đối với sinh viên trình độ năm thứ hai,\ndưới 1,20 đối với sinh viên trình độ năm thứ ba và dưới 1,50 đối với sinh viên\ncác năm tiếp theo.",
+            "15\ntập này không phụ thuộc vào điều kiện nâng mức cảnh báo học tập tại mục a và mục b\nkhoản này.\ne) Không xét cảnh báo học tập với học kỳ hè.\n2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh báo\nhọc tập từ mức 2 trở lên đăng ký số TC học phần ít hơn bình thường tại học kỳ 1 của năm\nhọc, cụ thể như sau:\na) Sinh viên thuộc các CTĐT chuẩn được đăng ký tối đa 14 TC và tối thiểu 8 TC cho\nmột học kỳ chính;"
+          ],
+          "reference_contexts": [
+            "lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập"
+          ],
+          "response": "Sinh viên sẽ bị nâng hai mức cảnh báo học tập khi có số tín chỉ (TC) không đạt trong học kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập [Document 2].",
+          "reference": "Khi số tín chỉ không đạt trong học kỳ lớn hơn 16, hoặc khi sinh viên tự ý bỏ học, không đăng ký học tập.",
+          "context_hit": true,
+          "retrieval_s": 0.1497,
+          "generation_s": 1.316
+        },
+        {
+          "id": "cb-03",
+          "category": "cảnh báo học tập",
+          "user_input": "Cảnh báo học tập mức 3 được áp dụng với sinh viên nào?",
+          "retrieved_contexts": [
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24.",
+            "được đăng ký tối đa 18 TC và tối thiểu 8 TC cho một học kỳ chính.\n\n3. Buộc thôi học là hình thức áp dụng đối với những sinh viên có kết quả học tập\n\nrất kém, cụ thể trong các trường hợp như sau:\n\na) Sinh viên bị cảnh báo học tập mức 3 lần thứ hai liên tiếp.\n\nb)  Sinh viên  học  chậm  tiến  độ  quá  thời gian  cho  phép,  hoặc  không  còn  đủ  khả\nnăng tốt nghiệp trong  thời gian cho phép theo quy định tại  khoản  3 Điều 3 của Quy\nchế này.\n\nĐiều 20. Xử lý vi phạm đối với sinh viên",
+            "được chuẩn tiếng Anh theo yêu cầu, sinh viên mới tiếp tục đăng ký học tập theo\nchương trình chuyên môn.\nĐiều 27. Cảnh cáo học tập\n1. Cảnh cáo học tập là hình thức cảnh báo cho sinh viên về kết quả học tập yếu kém\ncủa bản thân, đồng thời là cơ sở để Nhà trường xem xét điều kiện buộc thôi học.\n2. Cảnh cáo học tập có 3 mức (1, 2, 3), có tính tích lũy và tính giảm nhẹ. Tại thời\nđiểm tiến hành xử lý học tập cuối mỗi học kỳ chính, các mức cảnh cáo học tập được\nquy định như sau:"
+          ],
+          "reference_contexts": [
+            "Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa"
+          ],
+          "response": "Cảnh báo học tập mức 3 được áp dụng đối với sinh viên có số tín chỉ (TC) nợ đọng từ đầu khóa lớn hơn 24 [Document 1].",
+          "reference": "Sinh viên có số tín chỉ nợ đọng từ đầu khóa lớn hơn 24.",
+          "context_hit": true,
+          "retrieval_s": 0.2248,
+          "generation_s": 2.024
+        },
+        {
+          "id": "cb-04",
+          "category": "cảnh báo học tập",
+          "user_input": "Sinh viên đang bị cảnh báo học tập mức 1 hoặc mức 2 được hạ mức khi nào?",
+          "retrieved_contexts": [
+            "lớn hơn 24.\nd) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\nđ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học",
+            "học kỳ lớn hơn 8.\n\nb) Nâng hai  mức cảnh báo học tập  đối với sinh viên có số  TC không đạt trong\n\nhọc kỳ lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\n\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu\n\nkhóa lớn hơn 24.\n\nd)  Sinh  viên  đang  bị  cảnh  báo  học  tập  mức  1  và  mức  2,  nếu  số  TC  không  đạt\n\ntrong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.\n\nđ) Sinh viên đang  bị cảnh báo học tập mức  3,  nếu số TC nợ đọng từ đầu khóa",
+            "nhỏ hơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2.\n\ne) Không xem xét cảnh báo học tập với học kỳ hè.\n\n2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh\nbáo  học  tập  hoặc  chưa  đạt  chuẩn  ngoại  ngữ  đăng  ký  số  TC  học  phần  ít  hơn  bình\nthường, cụ thể như sau:\n\na) Sinh viên thuộc các CTĐT chuẩn được đăng ký tối đa 14 TC và tối thiểu 8 TC\n\ncho một học kỳ chính;\n\nb)  Sinh  viên  thuộc  các  chương  trình  ELITECH  và  các  CTĐT  hợp  tác  quốc  tế",
+            "các năm tiếp theo.\nb) Sinh viên bị nâng 2 mức cảnh cáo học tập khi điểm trung bình học kỳ bằng 0\nhoặc không đăng ký học tập, tự ý bỏ học không có lý do.\nc) Sinh viên bị cảnh cáo học tập mức 3 sẽ bị xử lý buộc thôi học như quy định trong\nĐiều 26.\nd) Sinh viên đã bị cảnh cáo học tập ở mức 1 hoặc 2, nếu trong lần xử lý học tập tiếp\ntheo không phạm vào các điều kiện nêu trong mục a hoặc b trên đây thì mức cảnh cáo\nsẽ được hạ xuống một mức.\nĐiều 28. Cảnh cáo kỷ luật",
+            "Điều 19. Cảnh báo học tập và buộc thôi học\n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức độ cảnh\nbáo học tập với sinh viên và được quy định như sau:\na) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8.\nb) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập.\nc) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24."
+          ],
+          "reference_contexts": [
+            "học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập"
+          ],
+          "response": "Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập [Document 1].",
+          "reference": "Khi số tín chỉ không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.",
+          "context_hit": true,
+          "retrieval_s": 0.1622,
+          "generation_s": 1.402
+        },
+        {
+          "id": "hp-01",
+          "category": "học phí",
+          "user_input": "Sinh viên rút học phần trong 7 tuần đầu thì phải đóng bao nhiêu phần trăm học phí?",
+          "retrieved_contexts": [
+            "3. Sinh viên, học viên có đơn đề nghị rút học phần trong khoảng thời gian 7 tuần\n(hoặc 3 tuần với các học phần tổ chức theo giảng dạy đợt A hoặc B) kể từ khi hết thời\nhạn điều chỉnh đăng ký lớp của học kỳ, nếu được giải quyết theo nguyện vọng thì chỉ\nđóng một nửa (50%) học phí của học phần đó. Quy định này không áp dụng với các\nhọc phần học ở kỳ hè.",
+            "nửa (50%) học phí của học phần đó. Trường hợp ngoại lệ là khi đề nghị rút học phần trong\ntuần đầu tiên của học kỳ thứ 2, nếu được giải quyết theo nguyện vọng thì không phải đóng\nhọc phí của học phần đó. Quy định tại khoản này không áp dụng với các học phần học ở\nhọc kỳ hè.\n4. Người học thuộc CTĐT cử nhân, kỹ sư có đơn đề nghị thôi học, nghỉ học tạm thời\nhoặc chuyển cơ sở đào tạo trong khoảng thời gian 7 tuần đầu của học kỳ, nếu được giải",
+            "4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ\nsở đào tạo trong khoảng thời gian 7 tuần kể từ khi hết thời hạn điều chỉnh đăng ký lớp\ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nửa (50%) học phí của\nhọc kỳ đó. Quy định này không áp dụng với kỳ hè.\n\n5. NCS đóng mức học phí theo năm học kể cả năm được gia hạn, trong đó đã bao\ngồm học phí của các học phần trong CTĐT tiến sĩ, không bao gồm các học phần bổ\nsung.\n\nCHƯƠNG II\n\nĐÀO TẠO ĐẠI HỌC",
+            "quyết theo nguyện vọng thì phải đóng một nửa (50%) học phí của học kỳ đó. Quy định này\nkhông áp dụng với kỳ hè.\n5. Học phí của lớp học phần rút gọn được tính ở mức 50% so với lớp học phần bình\nthường.\n6. Học phí đối với NCS được tính theo năm học, trong đó đã bao gồm học phí của\ncác học phần tiến sĩ (không bao gồm các học phần bổ sung).",
+            "2. Thời hạn được rút học phần chậm nhất là 6 tuần sau khi bắt đầu học kỳ chính và\n2 tuần sau khi bắt đầu học kỳ hè. Sau thời hạn trên học phần vẫn được giữ trong phiếu\nđăng ký học, nếu sinh viên không đi học sẽ được xem như tự ý bỏ học và phải nhận\nđiểm F cho học phần đó.\n3. Những sinh viên có lý do đặc biệt như bị ốm hoặc tai nạn phải nghỉ học nhiều\nngày có thể nộp đơn xin rút học phần có xác nhận của Trưởng khoa/Viện trưởng và"
+          ],
+          "reference_contexts": [
+            "chỉ\nđóng một nửa (50%) học phí của học phần đó"
+          ],
+          "response": "Sinh viên rút học phần trong 7 tuần đầu thì phải đóng 50% học phí của học phần đó, nếu được giải quyết theo nguyện vọng. Quy định này không áp dụng với các học phần học ở kỳ hè [Document 1].",
+          "reference": "Chỉ phải đóng một nửa (50%) học phí của học phần đó nếu đơn được giải quyết theo nguyện vọng. Quy định này không áp dụng với học phần học ở kỳ hè.",
+          "context_hit": true,
+          "retrieval_s": 0.1406,
+          "generation_s": 1.379
+        },
+        {
+          "id": "hp-02",
+          "category": "học phí",
+          "user_input": "Học phí năm học 2025-2026 được tính dựa trên cơ sở nào?",
+          "retrieved_contexts": [
+            "Căn cứ Tờ trình số 105/TTr-ĐT của Ban Đào tạo ngày 10 tháng 09 năm 2025 về mức\nhọc phí các chương trình đào tạo đại học chính quy, đào tạo kỹ sư chuyên sâu, vừa làm vừa\nhọc và sau đại học đối với năm học 2025-2026;\n\nTheo đề nghị của ông Trưởng Ban Đào tạo.\n\nQUYẾT ĐỊNH:\n\nĐiều 1. Phê duyệt mức học phí các chương trình đào tạo đại học chính quy, đào tạo kỹ sư\nchuyên sâu, vừa làm vừa học và sau đại học đối với năm học 2025-2026 tại Phụ lục I kèm theo.",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo chuẩn xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-CT%20Chuan-2024-2025.pdf) **(_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo Elitech xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-Elitech-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "### Thông báo về mức học phí đối với các chương trình đào tạo năm học 2024-2025\n**THÔNG BÁO**\n**Về mức học phí đối với các chương trình đào tạo năm học 2024-2025**\n\nBan Đào tạo thông báo về mức học phí năm học 2024-2025 áp dụng đối với các chương trình đào tạo như sau:\n\n  1. **Quy định về mức học phí đối với các loại chương trình đào tạo:**",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo hình thức Vừa làm vừa học xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-VLVH-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_)."
+          ],
+          "reference_contexts": [
+            "Học phí được tính theo số tín chỉ học phí (TCHP) của các học phần được sinh viên đăng"
+          ],
+          "response": "Học phí năm học 2025-2026 được tính dựa trên Tờ trình số 105/TTr-ĐT của Ban Đào tạo ngày 10 tháng 09 năm 2025 về mức học phí các chương trình đào tạo đại học chính quy, đào tạo kỹ sư chuyên sâu, vừa làm vừa học và sau đại học [Document 1].",
+          "reference": "Học phí được tính theo số tín chỉ học phí (TCHP) của các học phần mà sinh viên đăng ký học ở mỗi học kỳ.",
+          "context_hit": false,
+          "retrieval_s": 0.1319,
+          "generation_s": 1.432
+        },
+        {
+          "id": "hp-03",
+          "category": "học phí",
+          "user_input": "Mức học phí trong thông báo năm học 2024-2025 được tính theo đơn vị nào?",
+          "retrieved_contexts": [
+            "### Thông báo về mức học phí đối với các chương trình đào tạo năm học 2024-2025\n**THÔNG BÁO**\n**Về mức học phí đối với các chương trình đào tạo năm học 2024-2025**\n\nBan Đào tạo thông báo về mức học phí năm học 2024-2025 áp dụng đối với các chương trình đào tạo như sau:\n\n  1. **Quy định về mức học phí đối với các loại chương trình đào tạo:**",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo chuẩn xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-CT%20Chuan-2024-2025.pdf) **(_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo Elitech xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-Elitech-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo hình thức Vừa làm vừa học xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-VLVH-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_).",
+            "- Quy định về mức học phí năm học 2024-2025 đối với chương trình đào tạo hợp tác quốc tế xem **[tại đây](https://ctt.hust.edu.vn/Upload/Nguyen%20Quoc%20Dat/files/DTDH_QDQC/Hocphi/2024-2025/QD%20muc%20HP-HTQT-2024-2025.pdf)** (_đơn vị tính: nghìn đồng/01 tín chỉ học phí_)."
+          ],
+          "reference_contexts": [
+            "đơn vị tính: nghìn đồng/01 tín chỉ học phí"
+          ],
+          "response": "Mức học phí trong thông báo năm học 2024-2025 được tính theo đơn vị: nghìn đồng/01 tín chỉ học phí [Document 1].",
+          "reference": "Đơn vị tính là nghìn đồng trên 01 tín chỉ học phí.",
+          "context_hit": true,
+          "retrieval_s": 0.1759,
+          "generation_s": 1.074
+        },
+        {
+          "id": "dk-01",
+          "category": "đăng ký học phần",
+          "user_input": "Sau thời gian điều chỉnh đăng ký, sinh viên hủy đăng ký học phần có phải đóng học phí không?",
+          "retrieved_contexts": [
+            "b)  Sinh  viên  bị  cảnh  báo  học  tập  hoặc  chưa  đạt  chuẩn  ngoại  ngữ  theo  trình  độ\nnăm học bị giới hạn khối lượng đăng ký học tập theo quy định tại khoản 2 Điều 19 của\nQuy chế này.\n\n3. Sau thời gian điều chỉnh đăng ký, sinh  viên có thể  đề nghị hủy  đăng ký học\nphần để không tính kết quả học tập nhưng vẫn phải đóng học phí cho học phần đó theo\nquy định tại khoản 3 Điều 9 của Quy chế này. Thời hạn được phép hủy đăng ký học\nphần là trước 1/2 thời gian học của học phần đó.",
+            "học phần, nếu điều kiện tổ chức lớp học cho phép và sinh viên không vi phạm giới hạn\nkhối lượng quy định. Sinh viên không phải trả học phí cho những học phần đã được\nchấp nhận bỏ bớt. Riêng học kỳ hè chỉ không có đợt điều chỉnh đăng ký và sinh viên\nphải hoàn thành học phí theo khối lượng đăng ký trước khi bắt đầu học kỳ theo thời\ngian quy định để có tên trong danh sách lớp học.\n5. Trường có quy định cụ thể về các hình thức đăng k ý để phù hợp với từng điều",
+            "Đối với các học phần có nhiều lớp thành phần (lớp lý thuyết, bài tập, thực hành, thí\nnghiệm..), sinh viên phải đăng ký đủ các lớp thành phần theo yêu cầu.\nc) Điều chỉnh đăng ký: sinh viên có thể chuyển lớp, hủy lớp hoặc đăng ký lớp bổ\nsung, kể cả lớp với các học phần chưa đăng ký trước. Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ. Riêng việc đăng ký bổ sung vào các lớp\nhọc phần đã mở chỉ thực hiện trong tuần đầu của học kỳ. Học kỳ hè không có đợt điều",
+            "3. Sinh viên, học viên có đơn đề nghị rút học phần trong khoảng thời gian 7 tuần\n(hoặc 3 tuần với các học phần tổ chức theo giảng dạy đợt A hoặc B) kể từ khi hết thời\nhạn điều chỉnh đăng ký lớp của học kỳ, nếu được giải quyết theo nguyện vọng thì chỉ\nđóng một nửa (50%) học phí của học phần đó. Quy định này không áp dụng với các\nhọc phần học ở kỳ hè.",
+            "8\n\nc) Điều chỉnh đăng ký: sinh viên có thể chuyển lớp, hủy lớp hoặc đăng ký lớp bổ\nsung, kể cả lớp với các học phần chưa đăng ký trước. Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ/đợt học. Riêng việc đăng ký bổ sung\nvào các lớp học phần đã mở chỉ thực hiện trong tuần đầu của học kỳ/đợt học. Học kỳ\nhè không có đợt điều chỉnh đăng ký.\n\n2. Số lượng TC đăng ký:"
+          ],
+          "reference_contexts": [
+            "vẫn phải đóng học phí cho học phần đó"
+          ],
+          "response": "Có, sinh viên vẫn phải đóng học phí cho học phần đó theo quy định. Thời hạn được phép hủy đăng ký học phần là trước 1/2 thời gian học của học phần đó [Document 1].",
+          "reference": "Có. Sinh viên vẫn phải đóng học phí cho học phần đó, và thời hạn được phép hủy đăng ký là trước 1/2 thời gian học của học phần.",
+          "context_hit": true,
+          "retrieval_s": 0.0908,
+          "generation_s": 1.176
+        },
+        {
+          "id": "dk-02",
+          "category": "đăng ký học phần",
+          "user_input": "Mỗi học kỳ chính có mấy đợt điều chỉnh đăng ký học phần?",
+          "retrieved_contexts": [
+            "Đối với các học phần có nhiều lớp thành phần (lớp lý thuyết, bài tập, thực hành, thí\nnghiệm..), sinh viên phải đăng ký đủ các lớp thành phần theo yêu cầu.\nc) Điều chỉnh đăng ký: sinh viên có thể chuyển lớp, hủy lớp hoặc đăng ký lớp bổ\nsung, kể cả lớp với các học phần chưa đăng ký trước. Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ. Riêng việc đăng ký bổ sung vào các lớp\nhọc phần đã mở chỉ thực hiện trong tuần đầu của học kỳ. Học kỳ hè không có đợt điều",
+            "8\n\nc) Điều chỉnh đăng ký: sinh viên có thể chuyển lớp, hủy lớp hoặc đăng ký lớp bổ\nsung, kể cả lớp với các học phần chưa đăng ký trước. Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ/đợt học. Riêng việc đăng ký bổ sung\nvào các lớp học phần đã mở chỉ thực hiện trong tuần đầu của học kỳ/đợt học. Học kỳ\nhè không có đợt điều chỉnh đăng ký.\n\n2. Số lượng TC đăng ký:",
+            "ký tối đa 14 tín chỉ nhưng tối thiểu 8 tín chỉ các học phần thuộc chương trình đào tạo.\n4. Quy trình đăng ký học tập cho mỗi học kỳ gồm 3 giai đoạn: đăng k ý học phần,\nđăng ký lớp chính thức và điều chỉnh đăng ký. Thời gian bắt đầu và kết thúc các đợt\nđăng ký được quy định cụ thể trong lịch năm học, phụ thuộc theo thời gian bắt đầu học\nkỳ. Trong đợt điều chỉnh đăng ký, sinh viên có thể đăng ký bổ sung hoặc bỏ bớt một số",
+            "học phần, nếu điều kiện tổ chức lớp học cho phép và sinh viên không vi phạm giới hạn\nkhối lượng quy định. Sinh viên không phải trả học phí cho những học phần đã được\nchấp nhận bỏ bớt. Riêng học kỳ hè chỉ không có đợt điều chỉnh đăng ký và sinh viên\nphải hoàn thành học phí theo khối lượng đăng ký trước khi bắt đầu học kỳ theo thời\ngian quy định để có tên trong danh sách lớp học.\n5. Trường có quy định cụ thể về các hình thức đăng k ý để phù hợp với từng điều",
+            "1. Đăng ký học phần: Học viên thực hiện quy trình đăng ký học phần từ tài khoản\nhọc tập cá  nhân  theo  kế hoạch học tập chuẩn hoặc theo kế  hoạch  cá nhân. Học viên\nđược đào tạo theo hình thức chính quy có thể đăng ký tối đa 24 TC trong một học kỳ\nchính nhưng không vượt quá 45 TC trong một năm học. Học viên được đào tạo theo\nhình thức vừa làm vừa học có thể đăng ký tối đa 20 TC trong một học kỳ chính nhưng\nkhông vượt quá 30 TC trong một năm học. Học kỳ cuối khóa không áp dụng ngưỡng"
+          ],
+          "reference_contexts": [
+            "Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký"
+          ],
+          "response": "Mỗi học kỳ chính có hai đợt điều chỉnh đăng ký học phần, kết thúc trước khi bắt đầu học kỳ [Document 1].",
+          "reference": "Hai đợt điều chỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ. Đăng ký bổ sung vào lớp học phần đã mở chỉ thực hiện trong tuần đầu của học kỳ; học kỳ hè không có đợt điều chỉnh.",
+          "context_hit": true,
+          "retrieval_s": 0.1034,
+          "generation_s": 1.052
+        },
+        {
+          "id": "tn-01",
+          "category": "tốt nghiệp",
+          "user_input": "Điều kiện để sinh viên được xét công nhận tốt nghiệp là gì?",
+          "retrieved_contexts": [
+            "khoa/Viện trưởng là ủy viên. Sau mỗi học kỳ chính, Hội đồng xét tốt nghiệp họp một\nlần và lập ra danh sách những người đủ điều kiện tốt nghiệp.\n4. Căn cứ đề nghị của Hội đồng xét tốt nghiệp, Hiệu trưởng ký quyết định công\nnhận tốt nghiệp cho những sinh viên đủ điều kiện tốt nghiệp.\n5. Sinh viên không được Hội đồng đánh giá đủ điều kiện tốt nghiệp vì chưa hoàn\nthành chương trình đào tạo sẽ phải chủ động nộp lại đơn đăng ký xét tốt nghiệp ở một",
+            "bảo vệ luận văn lần thứ hai; kinh phí thực hiện và bảo vệ luận văn theo đề tài mới.\n\nĐiều 33. Điều kiện tốt nghiệp thạc sĩ và xếp hạng tốt nghiệp\n\n1. Học viên có đủ các điều kiện sau đây thì được xét công nhận tốt nghiệp:\n\na) Luận văn đạt yêu cầu.",
+            "6. Sinh viên học cùng lúc hai CTĐT sẽ phải đăng ký tốt nghiệp cùng đợt cho cả hai\nCTĐT. Sinh viên chỉ được xét tốt nghiệp chương trình thứ hai, nếu có đủ điều kiện tốt\nnghiệp ở chương trình thứ nhất và đã đăng kí học CTĐT thứ hai muộn nhất 02 năm trước\nthời điểm xét tốt nghiệp.\n7. Sinh viên được công nhận tốt nghiệp cả hai CTĐT sẽ được cấp hai bằng tốt nghiệp\nvà hai phụ lục văn bằng tương ứng.\nĐiều 19. Cảnh báo học tập và buộc thôi học",
+            "tốt nghiệp.\n5. Đối với một số ngành đào tạo đòi hỏi sinh viên phải dành nhiều thời gian thí\nnghiệm hoặc khảo sát để hoàn thành đồ án, khoá luận tốt nghiệp, trường có thể bố trí\nthời gian làm đồ án, khoá luận tốt nghiệp kết hợp với thời gian thực tập tốt nghiệp.\nĐiều 30. Xét tốt nghiệp và công nhận tốt nghiệp\n1. Dựa vào kết quả học tập của bản thân, sinh viên chủ động làm đơn đăng ký xét\ntốt nghiệp theo mẫu của Trường, nộp cho khoa/viện quản ngành để chuyển về phòng",
+            "11\n\ntrường  hợp  ngoại  lệ  sẽ  do  Hội  đồng  xét  tốt  nghiệp  quyết  định  và  trình  Giám  đốc\nĐHBK Hà Nội phê duyệt.\n\n3. Sinh viên có đủ các điều kiện sau đây thì được xét công nhận tốt nghiệp:\n\na) Đã hoàn thành đầy  đủ các học phần theo  yêu cầu của  CTĐT trong thời gian\nquy định, bao gồm cả các học phần thuộc chương trình môn học Giáo dục thể chất và\nGiáo dục quốc phòng-an ninh.\n\nb) Đạt chuẩn ngoại ngữ đầu ra."
+          ],
+          "reference_contexts": [
+            "Điểm trung bình tích lũy toàn khóa đạt từ 2,0 trở lên"
+          ],
+          "response": "Sinh viên được xét công nhận tốt nghiệp nếu có đủ các điều kiện sau:\n\na) Đã hoàn thành đầy đủ các học phần theo yêu cầu của chương trình đào tạo trong thời gian quy định, bao gồm cả các học phần thuộc chương trình môn học Giáo dục thể chất và Giáo dục quốc phòng-an ninh.\n\nb) Đạt chuẩn ngoại ngữ đầu ra [Document 5].",
+          "reference": "Sinh viên phải hoàn thành đầy đủ các học phần theo chương trình đào tạo trong thời gian quy định, nộp đồ án tốt nghiệp cho thư viện đúng quy cách, đạt chuẩn ngoại ngữ đầu ra, có điểm trung bình tích lũy toàn khóa từ 2,0 trở lên và không đang bị kỷ luật.",
+          "context_hit": false,
+          "retrieval_s": 0.0503,
+          "generation_s": 1.518
+        },
+        {
+          "id": "dv-01",
+          "category": "dịch vụ",
+          "user_input": "Sinh viên đi vào cổng Parabol thì gửi xe ở đâu?",
+          "retrieved_contexts": [
+            "**Hướng dẫn di chuyển và gửi xe**\n🔹 Cổng Parabol: Sinh viên có thể gửi xe tại các nhà xe D4-D6-D8.\n🔹 Cổng đường Đại Cồ Việt: Sinh viên có thể gửi xe tại nhà xe C4.\n🔹 Cổng Trần Đại Nghĩa: Sinh viên có thể gửi xe tại nhà xe C7 và D3.\n\n👉 Lưu ý: Đối với sinh viên gửi xe tại nhà xe C7, khi ra về, sinh viên nên di chuyển theo hướng cổng Đại Cồ Việt hoặc cổng Parabol để thuận tiện hơn.",
+            "![1788851602848 779202664400021421 6264649848061270925 b64b3d590008f2b31f7ebd4aa92dd8ce](https://hust.edu.vn/uploads/sys/sinh-vien/2026_09/1788851602848_779202664400021421_6264649848061270925_b64b3d590008f2b31f7ebd4aa92dd8ce.jpg)\n\n📍 Sinh viên vui lòng quan sát biển chỉ dẫn và thực hiện theo hướng dẫn của lực lượng bảo vệ, điều phối tại các khu vực cổng trường.\n\nK71 chủ động lựa chọn lộ trình – di chuyển thuận tiện – đến trường an toàn!",
+            "Danh sách sinh viên được học bổng xem [**TẠI ĐÂY**](https://bom.so/WDzQ7o)\nNhà trường sẽ làm thủ tục chuyển tiền học bổng qua tài khoản ViettelPay vào cuối tháng 11/2024. **_Những sinh viên CHƯA ĐĂNG KÝ TÀI KHOẢN để nhận học bổng hoặc sinh viên CÓ Ý KIẾN THẮC MẮC về việc xét cấp học bổng đăng ký tài khoản và gửi câu hỏi tại đường link sau trước 8h00 Thứ 2 ngày_** **_04_**** _/11/2024_** [**TẠI ĐÂY**](https://forms.office.com/r/6bVK6a9a7F)",
+            "chấm. Trong trường hợp không thống nhất thì các giảng viên chấm thi trình Trưởng bộ\nmôn (hoặc Trưởng khoa/Viện trưởng) quyết định.\n8. Các điểm thi kết thúc học phần phải ghi vào bảng điểm theo mẫu thống nhất của\nTrường, có chữ ký của cả hai giảng viên chấm thi. Bảng điểm thi kết thúc học phần\nphải được gửi về Văn phòng khoa/viện (bản sao) và phòng Đào tạo Đại học (bản gốc)\nchậm nhất 15 ngày sau ngày thi.\nĐiều 22. Khiếu nại điểm và sửa điểm",
+            "3. Sinh viên được phép thực hiện đồ án/khóa luận tốt nghiệp tại một cơ sở trong\nnước (cơ sở giáo dục đại học, viện nghiên cứu, doanh nghiệp,…) hoặc tại một cơ sở\nđào tạo ở nước ngoài theo chương trình trao đổi sinh viên đã được ký kết nhưng phải\nbảo  vệ  tại  ĐHBK  Hà  Nội  để  được  đánh  giá  và  cho  điểm.  Với  sinh  viên  thuộc  các\n\n\f9\n\nCTĐT theo hình thức VLVH tại đơn vị liên kết, việc đánh giá ĐATN được phép thực\nhiện tại đơn vị liên kết hoặc tại ĐHBK Hà Nội."
+          ],
+          "reference_contexts": [
+            "Cổng Parabol: Sinh viên có thể gửi xe tại các nhà xe D4-D6-D8"
+          ],
+          "response": "Sinh viên đi vào cổng Parabol thì gửi xe tại các nhà xe D4-D6-D8 [Document 1].",
+          "reference": "Sinh viên có thể gửi xe tại các nhà xe D4, D6 và D8.",
+          "context_hit": true,
+          "retrieval_s": 0.143,
+          "generation_s": 1.06
+        },
+        {
+          "id": "dv-02",
+          "category": "dịch vụ",
+          "user_input": "Sinh viên vào cổng Trần Đại Nghĩa gửi xe ở nhà xe nào?",
+          "retrieved_contexts": [
+            "**Hướng dẫn di chuyển và gửi xe**\n🔹 Cổng Parabol: Sinh viên có thể gửi xe tại các nhà xe D4-D6-D8.\n🔹 Cổng đường Đại Cồ Việt: Sinh viên có thể gửi xe tại nhà xe C4.\n🔹 Cổng Trần Đại Nghĩa: Sinh viên có thể gửi xe tại nhà xe C7 và D3.\n\n👉 Lưu ý: Đối với sinh viên gửi xe tại nhà xe C7, khi ra về, sinh viên nên di chuyển theo hướng cổng Đại Cồ Việt hoặc cổng Parabol để thuận tiện hơn.",
+            "_Kế hoạch, hồ sơ đăng ký xét cấp HB Trần Đại Nghĩa học kỳ 2 năm học 2023-2024 sinh viên xem**[TẠI ĐÂY](https://ctt.hust.edu.vn/DisplayWeb/DisplayBaiViet?baiviet=43409)** vào đầu tháng 2/2024_.",
+            "**Học bổng Trần Đại Nghĩa**\n\nHọc bổng Trần Đại Nghĩa là Học bổng của Đại học Bách khoa Hà Nội xét cấp cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo hoặc hộ có hoàn cảnh kinh tế đặc biệt khó khăn khác, sinh viên gặp tai nạn, rủi ro đột xuất) có kết quả học tập và rèn luyện tốt.\n\nHọc bổng Trần Đại Nghĩa xét theo học kỳ và có 2 mức tương ứng với 50% và 100% học phí.",
+            "**Học bổng Trần Đại Nghĩa: Mỗi giấc mơ đều xứng đáng đi tiếp**\n\nĐược đặt theo tên vị Hiệu trưởng đầu tiên của Đại học Bách khoa Hà Nội, học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh đặc biệt khó khăn nhưng vẫn vững vàng trong học tập và rèn luyện.\n\nHọc bổng Trần Đại Nghĩa được xét theo học kỳ, với hai mức hỗ trợ: 50% hoặc 100% học phí.",
+            "Xem chi tiết Quy định về việc xét cấp Học bổng Trần Đại Nghĩa sinh viên **TẠI ĐÂY**."
+          ],
+          "reference_contexts": [
+            "Cổng Trần Đại Nghĩa: Sinh viên có thể gửi xe tại nhà xe C7 và D3"
+          ],
+          "response": "Sinh viên vào cổng Trần Đại Nghĩa có thể gửi xe tại nhà xe C7 và D3 [Document 1].",
+          "reference": "Nhà xe C7 và D3. Sinh viên gửi xe tại C7 khi ra về nên đi theo hướng cổng Đại Cồ Việt hoặc cổng Parabol cho thuận tiện.",
+          "context_hit": true,
+          "retrieval_s": 0.0673,
+          "generation_s": 1.144
+        },
+        {
+          "id": "dv-03",
+          "category": "dịch vụ",
+          "user_input": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức ở đâu và vào những ngày nào?",
+          "retrieved_contexts": [
+            "**KẾ HOẠCH****LỄ TỐT NGHIỆP ĐỢT THÁNG 9.2026 TẠI HỘI TRƯỜNG C2**\n\n**1. Sáng thứ 7 ngày 26/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 7h15-7h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n  * Sinh viên vào Hội trường ổn định chỗ ngồi theo đúng khu vực do Ban tổ chức sắp xếp\n\n |\n| 7h45-8h00  |\n  * Văn nghệ chào mừng",
+            "|\n| + Trường CNTT&TT  |\n| + Trường Vật liệu  |\n| + Khoa Vật lý kỹ thuật  |\n**2. Chiều Chủ nhật ngày 27/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 13h15-13h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n\n |\n| 13h45-14h00  |\n  * Văn nghệ chào mừng\n\n |\n| 14h00-17h30  |\n  * Chương trình Lễ tốt nghiệp bắt đầu.\n  * Trao bằng tốt nghiệp cho sinh viên các Trường/Khoa theo thứ tự như sau:",
+            "**2. Sáng Chủ nhật ngày 27/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 7h15-7h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n\n |\n| 7h45-8h00  |\n  * Văn nghệ chào mừng\n\n |\n| 8h00-11h30  |\n  * Chương trình Lễ tốt nghiệp bắt đầu.\n  * Trao bằng tốt nghiệp cho sinh viên các Trường/Khoa theo thứ tự như sau:",
+            "|\n\n**2. Chiều thứ 7 ngày 26/9/2026:**\n| **Thời gian**  | **Nội dung**  |\n| --- | --- |\n| 13h15-13h45  |\n  * Sinh viên mượn Lễ phục tốt nghiệp và Phiếu lên sân khấu nhận bằng tốt nghiệp\n\n |\n| 13h45-14h00  |\n  * Văn nghệ chào mừng\n\n |\n| 14h00-17h30  |\n  * Chương trình Lễ tốt nghiệp bắt đầu.\n  * Trao bằng tốt nghiệp cho sinh viên các Trường/Khoa theo thứ tự như sau:\n\n |\n| + Trường Cơ khí  |\n| + Trường Kinh tế  |\n| + Khoa Toán - Tin  |",
+            "|\n| + Trường Điện – Điện tử  |\n| + Khoa Ngoại ngữ  |\n| + Khoa KH&CN Giáo dục  |\n**__Chú ý__** _:_\n  1. _Sinh viên được khen thưởng tốt nghiệp xuất sắc đã dự Lễ tốt nghiệp sáng Thứ 7 sẽ không dự Lễ tốt nghiệp theo Trường/Khoa và các buổi khác._\n  2. _Sinh viên lên sân khấu nhận bằng xong thì sang phòng Hội thảo C2 (phía sau Hội trường C2) để nhận hồ sơ tốt nghiệp._"
+          ],
+          "reference_contexts": [
+            "LỄ TỐT NGHIỆP ĐỢT THÁNG 9.2026 TẠI HỘI TRƯỜNG C2"
+          ],
+          "response": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức tại Hội trường C2 vào các ngày thứ 7 và Chủ nhật, cụ thể là ngày 26 và 27 tháng 9 năm 2026 [Document 1].",
+          "reference": "Lễ tốt nghiệp được tổ chức tại Hội trường C2, vào sáng thứ Bảy ngày 26/9/2026 và sáng Chủ nhật ngày 27/9/2026.",
+          "context_hit": true,
+          "retrieval_s": 0.1301,
+          "generation_s": 1.299
+        }
+      ],
+      "ragas": {
+        "faithfulness": 0.8333333333333334,
+        "answer_relevancy": 0.529359096191593,
+        "context_recall": 0.8,
+        "context_precision": 0.9196759258867766,
+        "_per_case": [
+          {
+            "user_input": "Học bổng khuyến khích học tập của Bách khoa Hà Nội có mấy mức?",
+            "faithfulness": 0.0,
+            "answer_relevancy": 0.5110236033844581,
+            "context_recall": 0.0,
+            "context_precision": 0.7499999999625
+          },
+          {
+            "user_input": "Điều kiện để được xét học bổng khuyến khích học tập loại xuất sắc là gì?",
+            "faithfulness": 0.5,
+            "answer_relevancy": 0.42179363713559465,
+            "context_recall": 1.0,
+            "context_precision": 0.99999999998
+          },
+          {
+            "user_input": "Học bổng Trần Đại Nghĩa dành cho đối tượng nào và có mấy mức?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.6498904731734084,
+            "context_recall": 1.0,
+            "context_precision": 0.94999999997625
+          },
+          {
+            "user_input": "Năm học 2023-2024 nhà trường dành bao nhiêu tiền cho quỹ học bổng khuyến khích học tập?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.5102305007680363,
+            "context_recall": 1.0,
+            "context_precision": 0.9166666666361111
+          },
+          {
+            "user_input": "Sinh viên có phải nộp đơn để được xét học bổng khuyến khích học tập không?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.4385232229158222,
+            "context_recall": 0.5,
+            "context_precision": 0.99999999998
+          },
+          {
+            "user_input": "Sinh viên bị nâng một mức cảnh báo học tập trong trường hợp nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.3256747448084639,
+            "context_recall": 1.0,
+            "context_precision": 0.8666666666377778
+          },
+          {
+            "user_input": "Khi nào sinh viên bị nâng hai mức cảnh báo học tập?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.3032166794630437,
+            "context_recall": 1.0,
+            "context_precision": 0.8666666666377778
+          },
+          {
+            "user_input": "Cảnh báo học tập mức 3 được áp dụng với sinh viên nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.47215541350428464,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999666667
+          },
+          {
+            "user_input": "Sinh viên đang bị cảnh báo học tập mức 1 hoặc mức 2 được hạ mức khi nào?",
+            "faithfulness": 0.6666666666666666,
+            "answer_relevancy": 0.3659052695257634,
+            "context_recall": 1.0,
+            "context_precision": 0.999999999975
+          },
+          {
+            "user_input": "Sinh viên rút học phần trong 7 tuần đầu thì phải đóng bao nhiêu phần trăm học phí?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.4495278061636863,
+            "context_recall": 1.0,
+            "context_precision": 0.999999999975
+          },
+          {
+            "user_input": "Học phí năm học 2025-2026 được tính dựa trên cơ sở nào?",
+            "faithfulness": 0.8333333333333334,
+            "answer_relevancy": 0.5511502740196897,
+            "context_recall": 0.0,
+            "context_precision": 0.699999999965
+          },
+          {
+            "user_input": "Mức học phí trong thông báo năm học 2024-2025 được tính theo đơn vị nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.5469805116954107,
+            "context_recall": 1.0,
+            "context_precision": 0.99999999998
+          },
+          {
+            "user_input": "Sau thời gian điều chỉnh đăng ký, sinh viên hủy đăng ký học phần có phải đóng học phí không?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.82616321898989,
+            "context_recall": 0.5,
+            "context_precision": 0.6999999999766667
+          },
+          {
+            "user_input": "Mỗi học kỳ chính có mấy đợt điều chỉnh đăng ký học phần?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.8456369058432137,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999666667
+          },
+          {
+            "user_input": "Điều kiện để sinh viên được xét công nhận tốt nghiệp là gì?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.46585554913357424,
+            "context_recall": 0.4,
+            "context_precision": 0.8041666666465626
+          },
+          {
+            "user_input": "Sinh viên đi vào cổng Parabol thì gửi xe ở đâu?",
+            "faithfulness": 0.5,
+            "answer_relevancy": 0.611894019363887,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999
+          },
+          {
+            "user_input": "Sinh viên vào cổng Trần Đại Nghĩa gửi xe ở nhà xe nào?",
+            "faithfulness": 0.5,
+            "answer_relevancy": 0.5711855400272261,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999
+          },
+          {
+            "user_input": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức ở đâu và vào những ngày nào?",
+            "faithfulness": 1.0,
+            "answer_relevancy": 0.6616563615332222,
+            "context_recall": 1.0,
+            "context_precision": 0.9999999999
+          }
+        ]
+      },
+      "median_retrieval_s": 0.02960038185119629
+    }
+  }
+}

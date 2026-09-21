@@ -1,0 +1,146 @@
+[
+  {
+    "id": "hb-01",
+    "question": "Học bổng khuyến khích học tập của Bách khoa Hà Nội có mấy mức?",
+    "expected_answer": "Học bổng khuyến khích học tập có 3 mức: loại C (khá) tương đương mức học phí sinh viên phải đóng, loại B (giỏi) bằng 1,2 lần loại C, và loại A (xuất sắc) bằng 1,5 lần loại C.",
+    "expected_context": "Học bổng KKHT được xét theo học kỳ và có 3 mức:",
+    "doc_type": "news",
+    "category": "học bổng"
+  },
+  {
+    "id": "hb-02",
+    "question": "Điều kiện để được xét học bổng khuyến khích học tập loại xuất sắc là gì?",
+    "expected_answer": "Sinh viên phải có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên. Sinh viên không cần đăng ký, nhà trường tự tổ chức xét cấp.",
+    "expected_context": "Học bổng loại xuất sắc: Sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên.",
+    "doc_type": "news",
+    "category": "học bổng"
+  },
+  {
+    "id": "hb-03",
+    "question": "Học bổng Trần Đại Nghĩa dành cho đối tượng nào và có mấy mức?",
+    "expected_answer": "Học bổng Trần Đại Nghĩa dành cho sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn (hộ nghèo, hộ cận nghèo, gặp tai nạn hoặc rủi ro đột xuất) nhưng có kết quả học tập và rèn luyện tốt. Học bổng xét theo học kỳ và có 2 mức tương ứng 50% và 100% học phí.",
+    "expected_context": "Học bổng Trần Đại Nghĩa xét theo học kỳ và có 2 mức tương ứng với 50% và 100% học phí.",
+    "doc_type": "news",
+    "category": "học bổng"
+  },
+  {
+    "id": "hb-04",
+    "question": "Năm học 2023-2024 nhà trường dành bao nhiêu tiền cho quỹ học bổng khuyến khích học tập?",
+    "expected_answer": "Khoảng 70 tỷ đồng.",
+    "expected_context": "Năm học 2023-2024, Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT",
+    "doc_type": "news",
+    "category": "học bổng"
+  },
+  {
+    "id": "hb-05",
+    "question": "Sinh viên có phải nộp đơn để được xét học bổng khuyến khích học tập không?",
+    "expected_answer": "Không. Nhà trường căn cứ kết quả học tập và rèn luyện để tổ chức xét cấp, sinh viên không cần phải đăng ký.",
+    "expected_context": "sinh viên không cần phải đăng ký",
+    "doc_type": "news",
+    "category": "học bổng"
+  },
+  {
+    "id": "cb-01",
+    "question": "Sinh viên bị nâng một mức cảnh báo học tập trong trường hợp nào?",
+    "expected_answer": "Khi số tín chỉ không đạt trong học kỳ lớn hơn 8.",
+    "expected_context": "Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học",
+    "doc_type": "legal",
+    "category": "cảnh báo học tập"
+  },
+  {
+    "id": "cb-02",
+    "question": "Khi nào sinh viên bị nâng hai mức cảnh báo học tập?",
+    "expected_answer": "Khi số tín chỉ không đạt trong học kỳ lớn hơn 16, hoặc khi sinh viên tự ý bỏ học, không đăng ký học tập.",
+    "expected_context": "lớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập",
+    "doc_type": "legal",
+    "category": "cảnh báo học tập"
+  },
+  {
+    "id": "cb-03",
+    "question": "Cảnh báo học tập mức 3 được áp dụng với sinh viên nào?",
+    "expected_answer": "Sinh viên có số tín chỉ nợ đọng từ đầu khóa lớn hơn 24.",
+    "expected_context": "Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa",
+    "doc_type": "legal",
+    "category": "cảnh báo học tập"
+  },
+  {
+    "id": "cb-04",
+    "question": "Sinh viên đang bị cảnh báo học tập mức 1 hoặc mức 2 được hạ mức khi nào?",
+    "expected_answer": "Khi số tín chỉ không đạt trong học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập.",
+    "expected_context": "học kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập",
+    "doc_type": "legal",
+    "category": "cảnh báo học tập"
+  },
+  {
+    "id": "hp-01",
+    "question": "Sinh viên rút học phần trong 7 tuần đầu thì phải đóng bao nhiêu phần trăm học phí?",
+    "expected_answer": "Chỉ phải đóng một nửa (50%) học phí của học phần đó nếu đơn được giải quyết theo nguyện vọng. Quy định này không áp dụng với học phần học ở kỳ hè.",
+    "expected_context": "chỉ\nđóng một nửa (50%) học phí của học phần đó",
+    "doc_type": "legal",
+    "category": "học phí"
+  },
+  {
+    "id": "hp-02",
+    "question": "Học phí năm học 2025-2026 được tính dựa trên cơ sở nào?",
+    "expected_answer": "Học phí được tính theo số tín chỉ học phí (TCHP) của các học phần mà sinh viên đăng ký học ở mỗi học kỳ.",
+    "expected_context": "Học phí được tính theo số tín chỉ học phí (TCHP) của các học phần được sinh viên đăng",
+    "doc_type": "legal",
+    "category": "học phí"
+  },
+  {
+    "id": "hp-03",
+    "question": "Mức học phí trong thông báo năm học 2024-2025 được tính theo đơn vị nào?",
+    "expected_answer": "Đơn vị tính là nghìn đồng trên 01 tín chỉ học phí.",
+    "expected_context": "đơn vị tính: nghìn đồng/01 tín chỉ học phí",
+    "doc_type": "news",
+    "category": "học phí"
+  },
+  {
+    "id": "dk-01",
+    "question": "Sau thời gian điều chỉnh đăng ký, sinh viên hủy đăng ký học phần có phải đóng học phí không?",
+    "expected_answer": "Có. Sinh viên vẫn phải đóng học phí cho học phần đó, và thời hạn được phép hủy đăng ký là trước 1/2 thời gian học của học phần.",
+    "expected_context": "vẫn phải đóng học phí cho học phần đó",
+    "doc_type": "legal",
+    "category": "đăng ký học phần"
+  },
+  {
+    "id": "dk-02",
+    "question": "Mỗi học kỳ chính có mấy đợt điều chỉnh đăng ký học phần?",
+    "expected_answer": "Hai đợt điều chỉnh đăng ký, kết thúc trước khi bắt đầu học kỳ. Đăng ký bổ sung vào lớp học phần đã mở chỉ thực hiện trong tuần đầu của học kỳ; học kỳ hè không có đợt điều chỉnh.",
+    "expected_context": "Mỗi học kỳ chính có hai đợt điều\nchỉnh đăng ký",
+    "doc_type": "legal",
+    "category": "đăng ký học phần"
+  },
+  {
+    "id": "tn-01",
+    "question": "Điều kiện để sinh viên được xét công nhận tốt nghiệp là gì?",
+    "expected_answer": "Sinh viên phải hoàn thành đầy đủ các học phần theo chương trình đào tạo trong thời gian quy định, nộp đồ án tốt nghiệp cho thư viện đúng quy cách, đạt chuẩn ngoại ngữ đầu ra, có điểm trung bình tích lũy toàn khóa từ 2,0 trở lên và không đang bị kỷ luật.",
+    "expected_context": "Điểm trung bình tích lũy toàn khóa đạt từ 2,0 trở lên",
+    "doc_type": "legal",
+    "category": "tốt nghiệp"
+  },
+  {
+    "id": "dv-01",
+    "question": "Sinh viên đi vào cổng Parabol thì gửi xe ở đâu?",
+    "expected_answer": "Sinh viên có thể gửi xe tại các nhà xe D4, D6 và D8.",
+    "expected_context": "Cổng Parabol: Sinh viên có thể gửi xe tại các nhà xe D4-D6-D8",
+    "doc_type": "news",
+    "category": "dịch vụ"
+  },
+  {
+    "id": "dv-02",
+    "question": "Sinh viên vào cổng Trần Đại Nghĩa gửi xe ở nhà xe nào?",
+    "expected_answer": "Nhà xe C7 và D3. Sinh viên gửi xe tại C7 khi ra về nên đi theo hướng cổng Đại Cồ Việt hoặc cổng Parabol cho thuận tiện.",
+    "expected_context": "Cổng Trần Đại Nghĩa: Sinh viên có thể gửi xe tại nhà xe C7 và D3",
+    "doc_type": "news",
+    "category": "dịch vụ"
+  },
+  {
+    "id": "dv-03",
+    "question": "Lễ tốt nghiệp đợt tháng 9/2026 được tổ chức ở đâu và vào những ngày nào?",
+    "expected_answer": "Lễ tốt nghiệp được tổ chức tại Hội trường C2, vào sáng thứ Bảy ngày 26/9/2026 và sáng Chủ nhật ngày 27/9/2026.",
+    "expected_context": "LỄ TỐT NGHIỆP ĐỢT THÁNG 9.2026 TẠI HỘI TRƯỜNG C2",
+    "doc_type": "news",
+    "category": "dịch vụ"
+  }
+]
